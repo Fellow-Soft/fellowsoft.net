@@ -1,0 +1,211 @@
+{
+  "schema": "fellowsoft.public-provenance/v1",
+  "canonicalOrigin": "https://fellowsoft.net",
+  "reviewedOn": "2026-10-07",
+  "scope": "Only images and runtime sources carried by this static public launch candidate.",
+  "runtimeOrigins": [
+    "https://api.weather.gov"
+  ],
+  "weather": {
+    "station": "KROC",
+    "location": "The public Rochester airport observation station, representing regional weather.",
+    "endpoint": "https://api.weather.gov/stations/KROC/observations/latest",
+    "delivery": "Requested by the visitor browser, with no household proxy, household coordinate or geolocation.",
+    "privacy": "The fixed public station identifier is the only application location sent. Ordinary browser and network metadata reaches the National Weather Service. The FellowSoft application adds no analytics or visitor log.",
+    "attribution": "Field weather by the National Weather Service",
+    "rightsBasis": "NWS observations are open data, free to use for any purpose. The field derives an illustrative atmosphere from those observations.",
+    "url": "https://www.weather.gov/",
+    "sourceDocumentation": "https://www.weather.gov/documentation/services-web-api",
+    "usePolicy": "https://www.weather.gov/disclaimer"
+  },
+  "imageFamilies": [
+    {
+      "id": "field-paintings",
+      "origin": "Project-controlled FellowSoft atmospheric paintings.",
+      "privacy": "Atmospheric illustration only."
+    },
+    {
+      "id": "preview-household",
+      "origin": "Screenshots of the invented North Hollow preview household, reviewed on 2026-10-07.",
+      "privacy": "No real household records, identity, street address, credential or private service URL.",
+      "freshPhotographs": 2,
+      "reviewedFallbackPhotographs": 7,
+      "timestampNote": "Fallback capture dates are not independently recorded; the review date does not claim their capture date.",
+      "transform": "Whole-frame resize and format conversion; source image metadata is excluded."
+    }
+  ],
+  "type": {
+    "delivery": "Five local font files. No font service is contacted.",
+    "notices": "/licenses/",
+    "source": "Official Fontsource 5.3.0 packages; Latin WOFF2 members copied unchanged."
+  },
+  "browserState": {
+    "intro": "One session-only flag remembers whether the arrival animation has played. It contains no identity or visit log.",
+    "instrument": "The Stubbook runs locally in a sandboxed frame, synthesizes its own music, and makes no network request."
+  },
+  "assets": [
+    {
+      "path": "media/grounds/cattail-marsh-dawn.webp",
+      "family": "field-paintings",
+      "sha256": "99aa824d28bb694bfcfaa818c2b9cf12f729b7228691d1e7b77fb28a0724953f"
+    },
+    {
+      "path": "media/grounds/cattail-marsh-day.webp",
+      "family": "field-paintings",
+      "sha256": "2a35f3e5d45445184e7690570e518027a6cc12c62e79cd7f2bc0ebb99c682648"
+    },
+    {
+      "path": "media/grounds/cattail-marsh-dusk.webp",
+      "family": "field-paintings",
+      "sha256": "5a7722199619ffa47ec2e5953a3acd7eee329097a640fda631253797627dc3c7"
+    },
+    {
+      "path": "media/grounds/cattail-marsh-night-live.webp",
+      "family": "field-paintings",
+      "sha256": "2a0ee722e227b9063a717ef3855e519be329c06960d7a52a974f71c3553b589a"
+    },
+    {
+      "path": "media/grounds/cattail-marsh-night.webp",
+      "family": "field-paintings",
+      "sha256": "9b1cace61d1cce7294e579e655a6349df685705856eaf86920753331f530d22a"
+    },
+    {
+      "path": "media/house/cuttings-dashboard-tablet.webp",
+      "family": "preview-household",
+      "sha256": "bda637a5cfa23bff6b23f1aa6368a455567464ed8ab4950c04b5e33082a7930b",
+      "sourceKind": "reviewed-fallback",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "path": "media/house/cuttings-trail-tablet.webp",
+      "family": "preview-household",
+      "sha256": "589862bcc0d4badefe1bb2494f8ba4150e689ff0dc2b9ad7161faa3ec938fd89",
+      "sourceKind": "reviewed-fallback",
+      "width": 1600,
+      "height": 2560
+    },
+    {
+      "path": "media/house/edition-tablet.webp",
+      "family": "preview-household",
+      "sha256": "5c2443b71cba9031938d7cbcfda51f97b8a0a237b6dbebb1f607041fd1332e4f",
+      "sourceKind": "fresh-preview",
+      "width": 1600,
+      "height": 2302
+    },
+    {
+      "path": "media/house/field-dusk-tablet.webp",
+      "family": "preview-household",
+      "sha256": "d13abf13feecf4817ccd1417d2b3de5e3e115a37f4117d410344d63dfc6a7112",
+      "sourceKind": "fresh-preview",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "path": "media/house/plan-dreaming-tablet.webp",
+      "family": "preview-household",
+      "sha256": "b424f72fa087a956ea8327949b249c571e42702a255aec6ce04951e9705c858e",
+      "sourceKind": "reviewed-fallback",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "path": "media/house/plot-dream-tablet.webp",
+      "family": "preview-household",
+      "sha256": "e6751cba7e0e80b395227ea36ba39bc7cd82782edbeb694dddbc80feeafc8333",
+      "sourceKind": "reviewed-fallback",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "path": "media/house/plots-shelf-tablet.webp",
+      "family": "preview-household",
+      "sha256": "5d94dd71911237c925cec8707d8732d09ad5ab86611c42aef7123513f3d8c6f8",
+      "sourceKind": "reviewed-fallback",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "path": "media/house/share-card.jpg",
+      "family": "preview-household",
+      "sha256": "d5218a7b35035b800b416fb5225c1e29fe365f59a9156ab6b54b2294e8b43a53",
+      "sourceKind": "fresh-preview",
+      "width": 1200,
+      "height": 750
+    },
+    {
+      "path": "media/house/weather-channel-tv.webp",
+      "family": "preview-household",
+      "sha256": "235c1e28632d34f5de8cc8911a62bcf7d9325ec13fee587fe2dbe492439e8c2b",
+      "sourceKind": "reviewed-fallback",
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "path": "media/house/welcome-tablet.webp",
+      "family": "preview-household",
+      "sha256": "c7f160f4c7fc08e3fed9e61955aa43f5492442ffb6a5d82d06e5ac3820f884ba",
+      "sourceKind": "reviewed-fallback",
+      "width": 1600,
+      "height": 2560
+    }
+  ],
+  "fontFiles": [
+    {
+      "path": "fonts/dm-sans-latin-wght-normal.woff2",
+      "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543",
+      "family": "DM Sans",
+      "sourcePackage": "@fontsource-variable/dm-sans",
+      "sourceVersion": "5.3.0",
+      "sourceMember": "package/files/dm-sans-latin-wght-normal.woff2",
+      "license": "SIL Open Font License 1.1",
+      "notice": "/licenses/DM_SANS_OFL.txt"
+    },
+    {
+      "path": "fonts/jetbrains-mono-latin-wght-normal.woff2",
+      "sha256": "18be452724bfdc236c074ca94a249a7f41a86752c7d04ab258ce9ed5651f6a7e",
+      "family": "JetBrains Mono",
+      "sourcePackage": "@fontsource-variable/jetbrains-mono",
+      "sourceVersion": "5.3.0",
+      "sourceMember": "package/files/jetbrains-mono-latin-wght-normal.woff2",
+      "license": "SIL Open Font License 1.1",
+      "notice": "/licenses/JETBRAINS_MONO_OFL.txt"
+    },
+    {
+      "path": "fonts/instrument-serif-latin-400-normal.woff2",
+      "sha256": "5eb09b5ac0e28b67c2f041c8ba6d244604ca0c0980d65912ab2d47fed84ddc31",
+      "family": "Instrument Serif",
+      "sourcePackage": "@fontsource/instrument-serif",
+      "sourceVersion": "5.3.0",
+      "sourceMember": "package/files/instrument-serif-latin-400-normal.woff2",
+      "license": "SIL Open Font License 1.1",
+      "notice": "/licenses/INSTRUMENT_SERIF_OFL.txt"
+    },
+    {
+      "path": "fonts/instrument-serif-latin-400-italic.woff2",
+      "sha256": "5a51946dfffa82972bc98745359c46761515641fda557c25116459a9f83da4a7",
+      "family": "Instrument Serif",
+      "sourcePackage": "@fontsource/instrument-serif",
+      "sourceVersion": "5.3.0",
+      "sourceMember": "package/files/instrument-serif-latin-400-italic.woff2",
+      "license": "SIL Open Font License 1.1",
+      "notice": "/licenses/INSTRUMENT_SERIF_OFL.txt"
+    },
+    {
+      "path": "fonts/source-serif-4-latin-wght-normal.woff2",
+      "sha256": "c1df4596be5029233ed2afbb8b2f6ea20784b3fb1aa5d6b5c6519ccd85eb3dfb",
+      "family": "Source Serif 4",
+      "sourcePackage": "@fontsource-variable/source-serif-4",
+      "sourceVersion": "5.3.0",
+      "sourceMember": "package/files/source-serif-4-latin-wght-normal.woff2",
+      "license": "SIL Open Font License 1.1",
+      "notice": "/licenses/SOURCE_SERIF_4_OFL.txt"
+    }
+  ],
+  "hosting": {
+    "provider": "GitHub Pages",
+    "application": "FellowSoft adds no analytics or application visitor record.",
+    "securityLogging": "GitHub Pages logs and stores visitor IP addresses for security purposes, including signed-out visitors.",
+    "source": "https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection"
+  }
+}

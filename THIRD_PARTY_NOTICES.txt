@@ -1,0 +1,33 @@
+FellowSoft public release: third-party notices
+
+Self-hosted font software
+
+DM Sans
+Copyright 2014 The DM Sans Project Authors.
+SIL Open Font License 1.1.
+Full notice: /licenses/DM_SANS_OFL.txt
+
+JetBrains Mono
+Copyright 2020 The JetBrains Mono Project Authors.
+SIL Open Font License 1.1.
+Full notice: /licenses/JETBRAINS_MONO_OFL.txt
+
+Instrument Serif
+Copyright 2022 The Instrument Serif Project Authors.
+SIL Open Font License 1.1.
+Full notice: /licenses/INSTRUMENT_SERIF_OFL.txt
+
+Source Serif 4
+Copyright 2014-2023 Adobe.
+SIL Open Font License 1.1.
+Full notice: /licenses/SOURCE_SERIF_4_OFL.txt
+
+Bundled JavaScript
+
+React, React DOM, and Scheduler
+Copyright (c) Meta Platforms, Inc. and affiliates.
+MIT License.
+Full notice: /licenses/REACT_MIT.txt
+
+Additional application dependencies are pinned, with license metadata,
+by the exact package lockfiles recorded for each release.
