@@ -1,8 +1,8 @@
 {
   "schema": "fellowsoft.public-provenance/v1",
   "canonicalOrigin": "https://fellowsoft.net",
-  "reviewedOn": "2026-10-07",
-  "scope": "Only images and runtime sources carried by this static public launch candidate.",
+  "reviewedOn": "2026-10-08",
+  "scope": "Reviewed assets and runtime sources carried by this public polish candidate.",
   "runtimeOrigins": [
     "https://api.weather.gov"
   ],
@@ -21,33 +21,66 @@
   "imageFamilies": [
     {
       "id": "field-paintings",
-      "origin": "Project-controlled FellowSoft atmospheric paintings.",
+      "origin": "Project-controlled FellowSoft atmospheric paintings. The matching CSS files embed those exact WebP bytes for first paint.",
       "privacy": "Atmospheric illustration only."
     },
     {
+      "id": "public-share",
+      "origin": "Previously reviewed North Hollow share card.",
+      "privacy": "Invented preview household; no resident records."
+    },
+    {
       "id": "preview-household",
-      "origin": "Screenshots of the invented North Hollow preview household, reviewed on 2026-10-07.",
-      "privacy": "No real household records, identity, street address, credential or private service URL.",
-      "freshPhotographs": 2,
-      "reviewedFallbackPhotographs": 7,
-      "timestampNote": "Fallback capture dates are not independently recorded; the review date does not claim their capture date.",
-      "transform": "Whole-frame resize and format conversion; source image metadata is excluded."
+      "origin": "Fresh October 8 software captures of the invented North Hollow household.",
+      "privacy": "No real resident records. Arcade shows blank cartridge placeholders; Watch shows authored fictional catalogue entries; weather uses invented conditions. Phone is a browser layout, not a physical-device photograph.",
+      "freshPhotographs": 9,
+      "reviewedFallbackPhotographs": 0,
+      "transform": "Crop, proportional resize and quiet device edge on paper; no UI retouching; no metadata copied."
+    },
+    {
+      "id": "work-demonstration",
+      "origin": "Fresh October 8 captures of the Work browser demonstration with the fictional company Parasol Labs.",
+      "privacy": "All company and employee data shown is fictional.",
+      "freshPhotographs": 4
+    },
+    {
+      "id": "native-study",
+      "origin": "Preserved software capture of the native Stub Book home screen, reviewed October 8.",
+      "privacy": "Four home panes only. No game, ROM or game list. No new physical-device qualification is implied.",
+      "freshPhotographs": 0,
+      "reviewedFallbackPhotographs": 1
+    },
+    {
+      "id": "window-glass",
+      "origin": "Rendered directly from the project-controlled canonical glass painter.",
+      "privacy": "Decorative illustration only."
     }
   ],
   "type": {
-    "delivery": "Five local font files. No font service is contacted.",
+    "delivery": "Five same-origin font files. The two front faces also travel embedded in the document head so their first use cannot reset the text. No font service is contacted.",
     "notices": "/licenses/",
     "source": "Official Fontsource 5.3.0 packages; Latin WOFF2 members copied unchanged."
   },
   "browserState": {
     "intro": "One session-only flag remembers whether the arrival animation has played. It contains no identity or visit log.",
-    "instrument": "The Stubbook runs locally in a sandboxed frame, synthesizes its own music, and makes no network request."
+    "instrument": "The Stubbook runs locally in a sandboxed frame, synthesizes its own music, and makes no network request.",
+    "specimen": "The public compiler and curated PlainLedger runtime operate in memory. The specimen calls no model, network or persistent storage. Reloading clears its visitor-entered rows."
   },
   "assets": [
+    {
+      "path": "media/grounds/cattail-marsh-dawn.css",
+      "family": "field-paintings",
+      "sha256": "3b9dafdaf3675e3647ec742ebfeaf27b51a20f1a07e435a489183ae7e7286707"
+    },
     {
       "path": "media/grounds/cattail-marsh-dawn.webp",
       "family": "field-paintings",
       "sha256": "99aa824d28bb694bfcfaa818c2b9cf12f729b7228691d1e7b77fb28a0724953f"
+    },
+    {
+      "path": "media/grounds/cattail-marsh-day.css",
+      "family": "field-paintings",
+      "sha256": "09dbc68aa0f2d2fe00f58cf327001b8573dcc13c34a022381a582f14de558013"
     },
     {
       "path": "media/grounds/cattail-marsh-day.webp",
@@ -55,9 +88,19 @@
       "sha256": "2a35f3e5d45445184e7690570e518027a6cc12c62e79cd7f2bc0ebb99c682648"
     },
     {
+      "path": "media/grounds/cattail-marsh-dusk.css",
+      "family": "field-paintings",
+      "sha256": "79423ece968b65f5b077032eb5a9a1a486ab1b651a7b84e6f9855f1614566468"
+    },
+    {
       "path": "media/grounds/cattail-marsh-dusk.webp",
       "family": "field-paintings",
       "sha256": "5a7722199619ffa47ec2e5953a3acd7eee329097a640fda631253797627dc3c7"
+    },
+    {
+      "path": "media/grounds/cattail-marsh-night-live.css",
+      "family": "field-paintings",
+      "sha256": "53a31d651bba79e24c401be02e072a6a899b2e65148813b9c5fe1011cd13eaeb"
     },
     {
       "path": "media/grounds/cattail-marsh-night-live.webp",
@@ -65,89 +108,126 @@
       "sha256": "2a0ee722e227b9063a717ef3855e519be329c06960d7a52a974f71c3553b589a"
     },
     {
+      "path": "media/grounds/cattail-marsh-night.css",
+      "family": "field-paintings",
+      "sha256": "d59805ce0ca89b7cc76af29ba8e58ba371555a774241326c25d87fc0ced080f4"
+    },
+    {
       "path": "media/grounds/cattail-marsh-night.webp",
       "family": "field-paintings",
       "sha256": "9b1cace61d1cce7294e579e655a6349df685705856eaf86920753331f530d22a"
     },
     {
-      "path": "media/house/cuttings-dashboard-tablet.webp",
-      "family": "preview-household",
-      "sha256": "bda637a5cfa23bff6b23f1aa6368a455567464ed8ab4950c04b5e33082a7930b",
-      "sourceKind": "reviewed-fallback",
-      "width": 1600,
-      "height": 1000
-    },
-    {
-      "path": "media/house/cuttings-trail-tablet.webp",
-      "family": "preview-household",
-      "sha256": "589862bcc0d4badefe1bb2494f8ba4150e689ff0dc2b9ad7161faa3ec938fd89",
-      "sourceKind": "reviewed-fallback",
-      "width": 1600,
-      "height": 2560
-    },
-    {
-      "path": "media/house/edition-tablet.webp",
-      "family": "preview-household",
-      "sha256": "5c2443b71cba9031938d7cbcfda51f97b8a0a237b6dbebb1f607041fd1332e4f",
-      "sourceKind": "fresh-preview",
-      "width": 1600,
-      "height": 2302
-    },
-    {
-      "path": "media/house/field-dusk-tablet.webp",
-      "family": "preview-household",
-      "sha256": "d13abf13feecf4817ccd1417d2b3de5e3e115a37f4117d410344d63dfc6a7112",
-      "sourceKind": "fresh-preview",
-      "width": 1600,
-      "height": 1000
-    },
-    {
-      "path": "media/house/plan-dreaming-tablet.webp",
-      "family": "preview-household",
-      "sha256": "b424f72fa087a956ea8327949b249c571e42702a255aec6ce04951e9705c858e",
-      "sourceKind": "reviewed-fallback",
-      "width": 1600,
-      "height": 1000
-    },
-    {
-      "path": "media/house/plot-dream-tablet.webp",
-      "family": "preview-household",
-      "sha256": "e6751cba7e0e80b395227ea36ba39bc7cd82782edbeb694dddbc80feeafc8333",
-      "sourceKind": "reviewed-fallback",
-      "width": 1600,
-      "height": 1000
-    },
-    {
-      "path": "media/house/plots-shelf-tablet.webp",
-      "family": "preview-household",
-      "sha256": "5d94dd71911237c925cec8707d8732d09ad5ab86611c42aef7123513f3d8c6f8",
-      "sourceKind": "reviewed-fallback",
-      "width": 1600,
-      "height": 1000
-    },
-    {
       "path": "media/house/share-card.jpg",
-      "family": "preview-household",
+      "family": "public-share",
       "sha256": "d5218a7b35035b800b416fb5225c1e29fe365f59a9156ab6b54b2294e8b43a53",
       "sourceKind": "fresh-preview",
       "width": 1200,
       "height": 750
     },
     {
-      "path": "media/house/weather-channel-tv.webp",
+      "path": "media/polish/garden-cuttings.webp",
       "family": "preview-household",
-      "sha256": "235c1e28632d34f5de8cc8911a62bcf7d9325ec13fee587fe2dbe492439e8c2b",
-      "sourceKind": "reviewed-fallback",
-      "width": 1600,
-      "height": 900
+      "sha256": "cf5c4d55513ec1cd32033484d7ec90206eb135ddbd842f9d60559a1886016368",
+      "alt": "The Cuttings writing tools above an invented garden quotation, with a tag, heart and scissors."
     },
     {
-      "path": "media/house/welcome-tablet.webp",
+      "path": "media/polish/garden-plan.webp",
       "family": "preview-household",
-      "sha256": "c7f160f4c7fc08e3fed9e61955aa43f5492442ffb6a5d82d06e5ac3820f884ba",
-      "sourceKind": "reviewed-fallback",
-      "width": 1600,
-      "height": 2560
+      "sha256": "4e27055a02ccf0dae65b5a8cecc887b5ef4ac6d4b817bac1a703586c56aced06",
+      "alt": "The garden plan in daylight, with a labelled long border and six dreamed plants beside the path."
+    },
+    {
+      "path": "media/polish/garden-plot-dream.webp",
+      "family": "preview-household",
+      "sha256": "17297ed35a1a5b7a74d0506ad42d0eaef686dbe264c626450fa4db9a2279e292",
+      "alt": "The long border plot’s dream, a bed with six plants drawn over the existing walled garden."
+    },
+    {
+      "path": "media/polish/garden-plots-shelf.webp",
+      "family": "preview-household",
+      "sha256": "0cb7056f27085311221f10397e04dd479599c7ea6080f7132a1a4a279d4101ac",
+      "alt": "The Plots shelf for this year, with three garden projects, their drawings and their budgets."
+    },
+    {
+      "path": "media/polish/house-edition.webp",
+      "family": "preview-household",
+      "sha256": "4d0d07d8ca135fa9f31190757ce7de8b97f86667c23a9ff0f32d7597707413b3",
+      "alt": "A close view of The Edition, with its masthead and the household paper’s leading story and notices."
+    },
+    {
+      "path": "media/polish/house-field-dusk.webp",
+      "family": "preview-household",
+      "sha256": "d32f27a42f5acd8cb5a00b49162e245b8efa89c86fd920ad10816a8f4c87ccf7",
+      "alt": "The North Hollow preview field at dusk, with four coloured window panes, marsh reeds and Stub on the sill."
+    },
+    {
+      "path": "media/polish/house-phone.webp",
+      "family": "preview-household",
+      "sha256": "63ec64dfdedcc4bb1e5d23ef3ecb12b5fbddd08a1ac29d78f49463a2d226762d",
+      "alt": "A close view of the House’s Cuttings journal in its phone layout, with an invented garden quotation."
+    },
+    {
+      "path": "media/polish/house-weather-loop.webp",
+      "family": "preview-household",
+      "sha256": "2ebd782ceb1561f59946a9308195d44bdcc9ecfe4c7258c68e652ee6616b6c68",
+      "alt": "The weather channel turning through its pages: current conditions, the seven days ahead with their highs, lows and chance of rain, and the almanac's sun and moon."
+    },
+    {
+      "path": "media/polish/house-weather-still.webp",
+      "family": "preview-household",
+      "sha256": "7b9fd0bf27ab3ef76f31fc8da8c4d62ca3dcaa70b5da6b25448f4c11bcfcfa8b",
+      "alt": "The weather channel's seven days ahead, with their highs, lows and chance of rain."
+    },
+    {
+      "path": "media/polish/stubbook-home.webp",
+      "family": "native-study",
+      "sha256": "0ffbf2354465fdd945a9b64fdf414bae730393bf121a760f6ca3971936c7487e",
+      "alt": "The preserved native Stub Book home screen, with four panes, a painted marsh and Stub on the sill."
+    },
+    {
+      "path": "media/polish/work-atrium.webp",
+      "family": "work-demonstration",
+      "sha256": "fbed997193d2157d9b3a2fcf82f0f05a9db9b0122adae3686e8a7c870875d59b",
+      "alt": "Atrium’s Today page over the marsh at midday, with a greeting, the calendar, kudos and the work in hand."
+    },
+    {
+      "path": "media/polish/work-people.webp",
+      "family": "work-demonstration",
+      "sha256": "860b3435b1253fd9d24fa38a7d5df05a5b8689611a14a9514fe21a5da6dca6e2",
+      "alt": "The company's book of people at dawn, with search, team filters and a card for each colleague."
+    },
+    {
+      "path": "media/polish/work-projects.webp",
+      "family": "work-demonstration",
+      "sha256": "1860429ef6a7891aa25fa83f500dfd7de80f7c17d3013dfaaca56f2ef9813fca",
+      "alt": "The project register at dusk, with four projects, their goals and how far each has settled."
+    },
+    {
+      "path": "media/polish/work-time-away.webp",
+      "family": "work-demonstration",
+      "sha256": "d8a487879d37f99d19b83db19e3d1a8955b3f5cc2041d9b118ce555f45829897",
+      "alt": "Time Off at midday, with who is away today, a person's balances and the requests waiting."
+    },
+    {
+      "path": "media/window/field-notes.webp",
+      "family": "window-glass",
+      "sha256": "6ce5eaf093609963b169848a2c3fcd809cfd006a5da3ef1d84d1edfb54774522"
+    },
+    {
+      "path": "media/window/here.webp",
+      "family": "window-glass",
+      "sha256": "0be2b58f35f6d1caeea3483fa67428118fb5e1d2d44c27d17199abcc6ba5a9eb"
+    },
+    {
+      "path": "media/window/home.webp",
+      "family": "window-glass",
+      "sha256": "55af8ef04011c676c1738b466fe684a40ceb33e654564e704a2faa0784974274"
+    },
+    {
+      "path": "media/window/work.webp",
+      "family": "window-glass",
+      "sha256": "a33447acad73bfeb039c0a79f10615bcd6e2a63010903ad7195af91e82decc9f"
     }
   ],
   "fontFiles": [
@@ -207,5 +287,32 @@
     "application": "FellowSoft adds no analytics or application visitor record.",
     "securityLogging": "GitHub Pages logs and stores visitor IP addresses for security purposes, including signed-out visitors.",
     "source": "https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection"
-  }
+  },
+  "inlineAssets": [
+    {
+      "id": "field-preview-dawn",
+      "mimeType": "image/webp",
+      "sha256": "91338353a2c88c5928540e50acccb7d644445e61e0fea9579c121dd9ff88d8c6"
+    },
+    {
+      "id": "field-preview-day",
+      "mimeType": "image/webp",
+      "sha256": "df9722a188ba0dff1d26bdb4db089803e1f736a01d36b9dbabc96ec7b6f19fef"
+    },
+    {
+      "id": "field-preview-dusk",
+      "mimeType": "image/webp",
+      "sha256": "7bc6fda884da27deea10775b9ffe2dca011f1450138da0945329d9ee6c01955f"
+    },
+    {
+      "id": "field-preview-night",
+      "mimeType": "image/webp",
+      "sha256": "33b5cddaf91f30be5d0b9e0fede1f57a363e7f824427239c3508c50c91e54329"
+    },
+    {
+      "id": "field-preview-night-live",
+      "mimeType": "image/webp",
+      "sha256": "f04ed1c55b7961bacf5c83b037d73cdfca73a4559a03f410c362a30ee8028320"
+    }
+  ]
 }
