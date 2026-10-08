@@ -258,6 +258,18 @@ body.awake .wake .sw::after{left:11px;background:var(--amber)}
     transition-duration:.001ms!important;scroll-behavior:auto!important}
   .paneglow{transition:none}
 }
+
+/* DEVICE MODE. Opened as ?device, the page is the object alone: the slate, its page,
+   its cards and its controls, with the essays left on the full page. */
+html.device{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+html.device .wrap{width:min(1340px,calc(100% - 32px));padding-top:14px}
+html.device .wrap>*:not(.top):not(.bench):not(.bootrow):not(.deck){display:none}
+html.device .top .sub{display:none}
+html.device .top{justify-content:space-between}
+html.device .bench{grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:20px}
+html.device .stage canvas{height:min(58vh,560px)}
+html.device .deck{margin-top:22px}
+@media (max-width:760px){html.device .bench{grid-template-columns:1fr}html.device .stage canvas{height:min(48vh,420px)}}
 </style>
 </head>
 <body>
@@ -550,6 +562,8 @@ body.awake .wake .sw::after{left:11px;background:var(--amber)}
 
 </div>
 <script>
+try{if(typeof location!=='undefined'&&/(?:^|[?&#])device(?:$|[&=])/.test(location.search.slice(1)+'&'+location.hash.slice(1))){document.documentElement.classList.add('device');/* in its room, the page tells the room how tall it is, so the room grows to hold it and nothing scrolls inside a box */if(window.parent!==window&&typeof ResizeObserver!=='undefined'){var tellRoom=function(){try{window.parent.postMessage({stubbookHeight:Math.ceil(document.documentElement.scrollHeight)},'*')}catch(e){}};window.addEventListener('load',tellRoom);new ResizeObserver(tellRoom).observe(document.documentElement)}}}catch(e){}
+
 /* ============================================================================
    STUBBOOK.  FellowSoft, run 0041. Stub, folded for the road.
 

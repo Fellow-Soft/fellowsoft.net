@@ -44,13 +44,6 @@
       "freshPhotographs": 4
     },
     {
-      "id": "native-study",
-      "origin": "Preserved software capture of the native Stub Book home screen, reviewed October 8.",
-      "privacy": "Four home panes only. No game, ROM or game list. No new physical-device qualification is implied.",
-      "freshPhotographs": 0,
-      "reviewedFallbackPhotographs": 1
-    },
-    {
       "id": "window-glass",
       "origin": "Rendered directly from the project-controlled canonical glass painter.",
       "privacy": "Decorative illustration only."
@@ -178,12 +171,6 @@
       "family": "preview-household",
       "sha256": "7b9fd0bf27ab3ef76f31fc8da8c4d62ca3dcaa70b5da6b25448f4c11bcfcfa8b",
       "alt": "The weather channel's seven days ahead, with their highs, lows and chance of rain."
-    },
-    {
-      "path": "media/polish/stubbook-home.webp",
-      "family": "native-study",
-      "sha256": "0ffbf2354465fdd945a9b64fdf414bae730393bf121a760f6ca3971936c7487e",
-      "alt": "The preserved native Stub Book home screen, with four panes, a painted marsh and Stub on the sill."
     },
     {
       "path": "media/polish/work-atrium.webp",
