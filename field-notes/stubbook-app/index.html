@@ -6,9 +6,9 @@
 <meta name="referrer" content="no-referrer">
 <meta name="color-scheme" content="dark">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; media-src 'none'; connect-src 'none'; font-src 'none'; worker-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
-<meta name="description" content="The FellowSoft Stubbook: one carried screen, eight drawn stops, and a choir made entirely inside this page. No radio is fitted.">
+<meta name="description" content="The FellowSoft Stub Book: one carried screen, eight drawn stops, and a choir made entirely inside this page. No radio is fitted.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='9' fill='%230b100d'/%3E%3Crect x='14' y='6' width='36' height='11' fill='%23d7c6a0'/%3E%3Crect x='12' y='17' width='40' height='38' rx='3' fill='%23131a14' stroke='%23b8934f' stroke-width='2'/%3E%3Crect x='18' y='23' width='28' height='19' fill='%236f8474'/%3E%3Crect x='18' y='46' width='5' height='5' fill='%23efe7d4'/%3E%3Crect x='26' y='46' width='5' height='5' fill='%23efe7d4'/%3E%3Crect x='34' y='46' width='5' height='5' fill='%23efe7d4'/%3E%3Crect x='42' y='46' width='4' height='5' fill='%23e9b366'/%3E%3C/svg%3E">
-<title>Stubbook · The FellowSoft handheld</title>
+<title>Stub Book · The FellowSoft handheld</title>
 <style>
 :root{
   --night:#0a0f0c; --slab:#0e140f; --board:#121a13; --board2:#161f17;
@@ -154,12 +154,12 @@ body.awake .wake .sw::after{left:11px;background:var(--amber)}
 .tog[aria-pressed="true"]{background:#2a2418;border-color:var(--brass);color:var(--amber)}
 
 /* ---- the collection, whose slot is the object itself ----
-   The card goes into the Stubbook and not into a rectangle beside it, so the
+   The card goes into the Stub Book and not into a rectangle beside it, so the
    stage is the drop target and the crown of the carve is where it lands. What
    is fitted is drawn on the object, which is the whole correspondence: the
    card standing out of the top is the card that is sounding. */
 /* THE RACK STANDS WITH THE OBJECT. Ten cards in one row directly under the
-   slate, so the Stubbook and its collection are in one view and the drag from
+   slate, so the Stub Book and its collection are in one view and the drag from
    a card to the crown is a short move rather than a journey across a scroll.
    Where the stage and the rack cannot both fit, the stage gives up the height:
    seeing the two together is worth more than a larger object. */
@@ -270,6 +270,42 @@ html.device .bench{grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:20px
 html.device .stage canvas{height:min(58vh,560px)}
 html.device .deck{margin-top:22px}
 @media (max-width:760px){html.device .bench{grid-template-columns:1fr}html.device .stage canvas{height:min(48vh,420px)}}
+
+/* The public-site study shares the paper and ink of the Bench. The downloaded
+   document retains its own standalone presentation. No remote assets needed. */
+html.site { background:#eee9dc; color-scheme:light; --night:#eee9dc; --board:#e4decd; --board2:#e4decd; --rule:#c3baa3; --rule2:#d3cbb8; --brass:#785d32; --brasslit:#60451e; --vellum:#29382e; --cool:#384a40; --dim:#536158; --dimmer:#5f6c61; --amber:#87512c; --amberglow:#87512c18; }
+html.site body { min-height:0; background:#eee9dc; color:#384a40; }
+html.site .wrap { width:100%; padding:12px 12px 24px; }
+html.site.device .top, html.site.device .bootrow { display:none; }
+html.site.device .bench { grid-template-columns:minmax(0,1fr) minmax(0,1.15fr); gap:18px; }
+html.site.device .stage canvas { height:300px; }
+html.site .stage { background:linear-gradient(160deg,#29382e,#101c17); }
+html.site .stage .hint, html.site .stage .lampmark { color:#dbd4bd; letter-spacing:.03em; font-size:11px; }
+html.site .pane, html.site .cell, html.site .boot, html.site .fitted { background:#e8e2d4; }
+html.site .pane > h2, html.site .collectionhead h2, html.site .cell h3 { font-size:12px; letter-spacing:.08em; }
+html.site .key, html.site .say, html.site .wakerow .say { color:#536158; font-size:12px; }
+html.site .deckhead > p { color:#536158; }
+html.site .wake, html.site .tog, html.site .padgrid button, html.site .btn { background:#ddd5c2; color:#29382e; min-height:44px; }
+html.site .wake { border-color:#785d32; }
+html.site .deck { margin-top:24px; }
+html.site .cardmeta b { font-size:12px; line-height:1.4; }
+html.site .cardmeta span { font-size:10px; }
+html.site .meter { display:none; }
+html.site .stop, html.site .rnd, html.site .wheelrow button { background:#ddd5c2; color:#29382e; border-color:#91846b; min-height:44px; font-size:11px; }
+html.site .stop[aria-pressed="true"], html.site .rnd[aria-pressed="true"], html.site .tog[aria-pressed="true"] { background:#29382e; color:#f4eddb; border-color:#29382e; }
+html.site .stop i { color:inherit; }
+html.site .wake:hover { color:#29382e; background:#d4cbb6; }
+html.site .cell .key { font-size:12px; letter-spacing:0; text-transform:none; }
+html.site .fitted .nowsay { color:#536158; font-size:12px; }
+html.site .rack { grid-template-columns:repeat(auto-fit,minmax(min(266px,100%),1fr)); }
+html.site .padgrid { grid-template-rows:repeat(3,44px); }
+html.site .collectionhead .key { font-size:12px; }
+html.site .keepnote { color:#536158; }
+html.device .wrap > #keepsake:not([hidden]) { display:block; }
+html.site :focus-visible { outline:2px solid #87512c; outline-offset:3px; }
+@media(max-width:760px){ html.site.device .bench { grid-template-columns:1fr; } html.site.device .stage canvas{height:240px;} html.site .wrap{padding:10px 8px 20px;} html.site .stage .hint{font-size:10px;} }
+html.site :is(.stage .hint,.stage .lampmark,.cardmeta span,.stop,.rnd,.wheelrow button,.key,.keepnote) { font-size:12px; }
+@media(max-width:760px) { html.site :is(.stage .hint,.stage .lampmark,.cardmeta span,.stop,.rnd,.wheelrow button,.key,.keepnote,.say,.wakerow .say,.pane > h2,.collectionhead h2,.cell h3,.cardmeta b,.cell .key,.fitted .nowsay,.collectionhead .key) { font-size:13px; } }
 </style>
 </head>
 <body>
@@ -277,31 +313,31 @@ html.device .deck{margin-top:22px}
 <div class="wrap">
 
 <header class="top">
-  <h1>Stubbook</h1>
+  <h1>Stub Book</h1>
   <div class="plate">FellowSoft · Run 0041 · Stub, folded for the road</div>
-  <p class="sub">The one FellowSoft screen you can carry out of the house. A leaf chooses one setting for the musical study already in this page; external tool fitting is not yet proved, and no radio is fitted.</p>
+  <p class="sub">A musical study of a portable part of FellowSoft Home. Its cards carry settings and written pieces. Support for other Stub tools is still in development.</p>
 </header>
 
-<p class="lead">This is the Stubbook running one instrument. Eight stops latch under your fingers, the Bellows gives the choir its breath, and the Pad gives it notes. Everything you hear is made from oscillators and filters inside this page. Nothing is fetched, nothing is recorded, and nothing leaves.</p>
+<p class="lead">This is the Stub Book running one instrument. Eight stops latch under your fingers, the Bellows gives the choir its breath, and the Pad gives it notes. Everything you hear is made from oscillators and filters inside this page. Nothing is fetched, nothing is recorded, and nothing leaves.</p>
 
 <section class="bench" aria-label="The instrument and its cards">
   <div>
     <div class="stage" id="stage">
       <canvas id="slate" width="900" height="720" tabindex="0"
-        aria-label="The Stubbook, in three dimensions. Drag to turn it."></canvas>
+        aria-label="The Stub Book, in three dimensions. Drag to turn it."></canvas>
       <span class="hint">Drag to turn · double click to set it straight</span>
       <span class="lampmark" id="lampmark">Lamp at rest</span>
     </div>
     <div class="wakerow">
       <button class="wake" id="wake" aria-pressed="false"><span class="sw" aria-hidden="true"></span>Wake</button>
-      <p class="say" id="bootsay">Throw WAKE and the Stubbook makes its first sound. Nothing sounds before you do.</p>
+      <p class="say" id="bootsay">Press Wake to begin. Choose a card, then explore the controls.</p>
     </div>
     <div class="meter" id="meter"></div>
     <div class="warn" id="nosound" hidden></div>
 
     <div class="drawn" id="drawn" hidden>
       <h2 style="font-family:var(--set);font-size:19px;color:var(--vellum);letter-spacing:.08em">The object, drawn</h2>
-      <p id="drawnwhy">This browser gives no WebGL, so the Stubbook is drawn flat instead of turned. Everything it does still works.</p>
+      <p id="drawnwhy">This browser gives no WebGL, so the Stub Book is drawn flat instead of turned. Everything it does still works.</p>
       <canvas id="flat" width="440" height="740" style="margin-top:12px;border:1px solid var(--rule)"></canvas>
     </div>
   </div>
@@ -319,7 +355,7 @@ html.device .deck{margin-top:22px}
   <div class="collectionrow" id="collectionsection">
     <div class="collectionhead">
       <h2>The collection</h2>
-      <p class="key">Drag a card up onto the Stubbook and let go over its crown . or click one . or tab to it and press Enter</p>
+      <p class="key">Scroll through the ten cards and select one to fit it. You can also drag a card onto the Stub Book, or use Tab and Enter.</p>
       <div class="toggles">
         <button class="tog" id="turncard">Turn it over</button>
         <button class="tog" id="pullcard">Pull it out</button>
@@ -330,7 +366,7 @@ html.device .deck{margin-top:22px}
       <div class="pane fitted" id="fittedpane">
         <h2>What is fitted</h2>
         <p class="nowname" id="nowname">Nothing is fitted</p>
-        <p class="nowsay" id="nowsay">The crown is empty. Drag a card up onto the Stubbook, or press Enter on one.</p>
+        <p class="nowsay" id="nowsay">The crown is empty. Drag a card up onto the Stub Book, or press Enter on one.</p>
         <p class="nowsection" id="nowsection">Nothing is fitted</p>
         <p class="nowbar" id="nowbar"></p>
         <p class="readout" id="readout">Pressing the cards.</p>
@@ -343,7 +379,7 @@ html.device .deck{margin-top:22px}
   <p class="cardnote">Ten stiff printed cards, and they are loose. The slot is on the object itself: one card goes into its top edge at a time and stands proud of the crown, so you can read across a room what the thing is doing. The card standing out of the top is always the card that is sounding, and that correspondence is the whole point of the slot.</p>
   <p class="cardnote">Seven of them are leaves, which are one setting each, and three are themes, which are whole pieces. Both press onto the same face under the same kind byte, because the card is one format and a second one would be a second thing to keep true. Fitting a card reads the marks off it, mends whatever the parity has to mend, and hands the instrument what came back from the paper. Nothing here hands back the thing it started from.</p>
   <p class="cardnote">A leaf gives the bench a setting and the bench plays it, so the stops, the Pad and the Bellows are all still in the path. A theme is a written piece and it drives the instrument itself, so while one is fitted the stops are standing state and not a signal path: they say what they say and the piece does not go through them. Pull the card out and the bench has the instrument back.</p>
-  <p class="cardnote cardnote--gate">The card format is a candidate and has not passed its gate. It has an open encoder, a decoder and error correction, all three of them in this page. It does not have print tolerance, scan tolerance, or an ordinary printer proof. Said plainly here because it is shown here.</p>
+  <p class="cardnote cardnote--gate">The digital card maker, reader and error correction work in this study. Printing cards and reading them reliably with a camera are still in development.</p>
 </section>
 
 <section class="bootrow bootrow--one" aria-label="The boot report">
@@ -355,7 +391,7 @@ html.device .deck{margin-top:22px}
 <section class="deck" id="deck">
   <div class="deckhead">
     <h2>The controls</h2>
-    <p>Every one of these is on the object, and every one does what its name says. The keyboard is the whole instrument.</p>
+    <p>Play with the buttons and sliders, or use the keyboard shortcuts shown below.</p>
   </div>
 
   <div class="rack">
@@ -419,13 +455,13 @@ html.device .deck{margin-top:22px}
     </div>
 
     <div class="cell">
-      <h3>Wake, Sidelight, Keep</h3>
+      <h3>Wake, light and travel lock</h3>
       <p class="key">W · L · K</p>
       <div class="toggles">
         <button class="tog" id="sidelight" aria-pressed="false">Sidelight</button>
-        <button class="tog" id="keep" aria-pressed="false">Keep</button>
+        <button class="tog" id="keep" aria-pressed="false">Travel lock</button>
       </div>
-      <p class="key" style="margin-top:9px">Keep shutters the slot and pins Wake down. Nothing turns on or falls out.</p>
+      <p class="key" style="margin-top:9px">Travel lock stops the sound and locks the controls. Press it again to unlock.</p>
     </div>
 
     <div class="cell">
@@ -436,28 +472,29 @@ html.device .deck{margin-top:22px}
     </div>
 
     <div class="cell">
-      <h3>Print a leaf</h3>
+      <h3>Keep the moment</h3>
       <p class="key">P · the card is drawn in this page</p>
-      <button class="tog" id="printleaf" style="width:100%">Print this leaf</button>
+      <button class="tog" id="printleaf" style="width:100%">Draw a keepsake</button>
+      <p class="key" id="printstatus" role="status"></p>
       <p class="key" style="margin-top:9px">It carries the stops you drew, the mode, the tempo, and the run number.</p>
     </div>
   </div>
 
 </section>
 
-<section class="keep" id="keepsake">
+<section class="keep" id="keepsake" hidden>
   <div class="deckhead">
-    <h2>The leaf you keep</h2>
-    <p>Drawn on a canvas here in the page. Save it with your own browser if you want it; nothing is pushed at you.</p>
+    <h2>Your settings, as a keepsake</h2>
+    <p>A picture of these settings and this moment in the music. Save the image with your browser to keep it. This picture is a souvenir; the playable music cards are in the collection above.</p>
   </div>
   <canvas id="leafout" width="1040" height="620" aria-label="A printed leaf card recording the current setting"></canvas>
-  <p class="keepnote">Press <kbd>P</kbd> or the button above and the card is redrawn from whatever the Stubbook is doing at that moment. It is a picture in this tab. It is not uploaded, not stored, and it is gone when you close the frame.</p>
+  <p class="keepnote">Press <kbd>P</kbd> or the button above and the card is redrawn from whatever the Stub Book is doing at that moment. It is a picture in this tab. It is not uploaded, not stored, and it is gone when you close the frame.</p>
 </section>
 
 <section class="naming" aria-label="The name">
   <div class="deckhead">
     <h2>The name</h2>
-    <p>Why this object is a Stubbook, and could not honestly be called anything else.</p>
+    <p>Why this object is a Stub Book, and could not honestly be called anything else.</p>
   </div>
   <div class="argument">
     <p class="charter">The charter puts him on the windowsill in one line. "On the sill sits Stub, a small printed ticket that is also FellowSoft's making language."</p>
@@ -474,7 +511,7 @@ html.device .deck{margin-top:22px}
   </div>
   <div class="argument">
     <p class="canon">Every tool needs a stub. A stub is the definition. The card is the carrier you own.</p>
-    <p>The seven leaves in the rack above already act as carriers, and they are already the right shape: one stiff drawn card, one complete setting for the musical study embedded in this page, pushed into the top edge with a thumb. What they are not yet is paper, and what they do not yet carry is an external stub definition. The direction is that they stop being drawn and start carrying one schema-valid tool each. When that larger system is proved, every tool the household makes gets a real printed carrier, and the Stubbook runs no tool it has not been handed one for. That is software as an object: a thing you own, shelve, lend and hold. It is the promise the late nineteen nineties made about what sat on a desk and never kept, and the late nineteen nineties is the shelf this whole object was built for.</p>
+    <p>The seven leaves in the rack above already act as carriers, and they are already the right shape: one stiff drawn card, one complete setting for the musical study embedded in this page, pushed into the top edge with a thumb. What they are not yet is paper, and what they do not yet carry is an external stub definition. The direction is that they stop being drawn and start carrying one schema-valid tool each. When that larger system is proved, every tool the household makes gets a real printed carrier, and the Stub Book runs no tool it has not been handed one for. That is software as an object: a thing you own, shelve, lend and hold. It is the promise the late nineteen nineties made about what sat on a desk and never kept, and the late nineteen nineties is the shelf this whole object was built for.</p>
     <p>A wish becomes canon when somebody measures it, so it was measured against the real thing a card would have to carry. The largest plate in the Stub Specimen Book is five thousand seven hundred and forty nine bytes of executed compiler output, and one thousand four hundred and eighty two bytes gzipped. A QR code at version forty, binary, error correction level L, holds two thousand nine hundred and fifty three bytes. So the largest tool this house has actually compiled goes onto one printed card and leaves about as much room again unused, and the smaller plates fit several times over. Nothing proprietary is needed for any of it and no special media: a code printed on card, and a lens to read it. Both are commodity, and both are older than the object that would use them.</p>
     <p>What makes that right rather than merely clever is the line this device already prints on its own screen. NOT FITTED against Network is a design statement and not a fault report, and a lens reading a card somebody physically put in front of it is not a radio. The object would take in exactly what it was handed and stay incapable of reaching anything it was not. That is the ownership argument made in hardware instead of in copy. A card cannot be revoked, cannot report back, and cannot be changed under you while you sleep.</p>
     <p>And the same lens would serve twice. Point it at a card and a tool loads. Point it at the room and it takes a picture, rendered down to this device's own reflective monochrome screen. One sensor, two uses, and no feature creep in between. The precedent is nineteen ninety eight, when a camera that plugged into the top of a handheld shot small greyscale, dithered everything it saw, and made objects people have kept for a quarter of a century.</p>
@@ -488,7 +525,7 @@ html.device .deck{margin-top:22px}
     <p>What the thing in your hands actually is, which is not the instrument you have been playing.</p>
   </div>
   <div class="argument">
-    <p class="canon">The Stubbook is not an instrument. It is the intended handheld runtime. In this working proof, the instrument is the musical study embedded in the page, and each leaf carries one of its settings.</p>
+    <p class="canon">The Stub Book is not an instrument. It is the intended handheld runtime. In this working proof, the instrument is the musical study embedded in the page, and each leaf carries one of its settings.</p>
     <p>Read the object the other way round from the way this page has been reading it. Everything above is what one embedded musical study does. The board under it enacts the portable half of the household's intended system: the house is where the work is done, and this is the half that leaves. It runs alone, with no radio and nothing to reach. Fit a different setting carrier and the same study changes its setting; this proof does not yet fit a different tool. The instrument is the embedded study, not the leaf and not the object.</p>
     <p>A future leaf is intended to carry the whole tool definition rather than a key to one kept somewhere else, and that is the difference the slot is meant to prove. The card is stiff, printed, small enough to push into the top edge with a thumb, and it stands proud there so anyone across the room can read which one is in. You own it, you shelve it, you lend it, and you can see what you own by looking at the shelf. How such a card could be read is measured in the section above: a printed code and a lens, both commodity, both older than the object, and neither of them a format anybody could lock you out of. That fit remains a proposal until a real external definition passes through it.</p>
     <p>So the first modular law is already clear even though the general runtime is not yet proved. A leaf is a carrier module. In this page it chooses one setting inside the study already standing there. The next proof is a schema-valid external stub arriving through the same slot on the same kind of card. There is no second way in. No account, no store, and no channel by which a tool could reach the intended object that a hand did not carry to it. That is a smaller machine than the one you are used to, and a larger one to own.</p>
@@ -512,7 +549,7 @@ html.device .deck{margin-top:22px}
       <li><span class="lbl">Sample</span><span class="dots"></span><span class="v no">None loaded</span></li>
       <li><span class="lbl">Font file</span><span class="dots"></span><span class="v no">None loaded</span></li>
     </ul>
-    <p style="margin-top:12px">That last run of lines is not an apology. It is the design. The Stubbook is the one screen in this house you can carry out of it, and the reason your data stays yours is that nothing here can carry it away.</p>
+    <p style="margin-top:12px">This musical study works entirely in the page. Download it as one document and take it with you; the instrument and its cards are included.</p>
   </div>
 
   <div>
@@ -541,7 +578,7 @@ html.device .deck{margin-top:22px}
   <div>
     <h2>Honest notes on the object</h2>
     <p>The slate you are turning is a real sculpt carried in as numbers: four thousand and ninety two points and just under eight thousand faces, quantised to sixteen bits and unpacked at boot. No model file is fetched, because none exists to fetch.</p>
-    <p>Two things about it are not the drawing. The sculpt never grew the handle the design asks for, so the Stubbook here is a plain slate with a rounded foot. And the sculpt carries five raised keys where the design draws eight, so the paint gives you eight and the relief under it gives you five. Eight drawn stops is the thing you sketch from memory, so the paint wins and the record says so.</p>
+    <p>Two things about it are not the drawing. The sculpt never grew the handle the design asks for, so the Stub Book here is a plain slate with a rounded foot. And the sculpt carries five raised keys where the design draws eight, so the paint gives you eight and the relief under it gives you five. Eight drawn stops is the thing you sketch from memory, so the paint wins and the record says so.</p>
     <p>The pane in the sculpt is taller than the panel the design names, so the page is drawn two hundred and forty by three hundred rather than two hundred and forty by two hundred. The three bands are in the order the design sets them: the stop ledger, the roll, and the four status lines.</p>
     <p>Its faces are drawn from both sides on purpose. The carve left five hundred and fifty five open edges along the card and the screen well, and a single sided pass would show straight through them.</p>
   </div>
@@ -555,17 +592,17 @@ html.device .deck{margin-top:22px}
 </section>
 
 <footer class="foot">
-  <p><b>Stubbook.</b> A FellowSoft field note, made to be played. One document, one inline script, one inline stylesheet. No request of any kind is made at runtime: no service, no model, no key, no font file, no sample, no picture.</p>
+  <p><b>Stub Book.</b> A FellowSoft field note, made to be played. One document, one inline script, one inline stylesheet. No request of any kind is made at runtime: no service, no model, no key, no font file, no sample, no picture.</p>
   <p style="margin-top:8px">If your device is an iPhone and it stays silent, check the switch on its side. Web Audio follows the hardware ringer switch and there is no honest way for a page to work around it or to detect it.</p>
-  <p style="margin-top:8px" id="creditline">Sound begins only after you throw Wake. Reduced motion is honoured: the slate holds a pose and the roll steps rather than scrolls.</p>
+  <p style="margin-top:8px" id="creditline">Sound begins only after you press Wake. Reduced motion is honoured: the slate holds a pose and the roll steps rather than scrolls.</p>
 </footer>
 
 </div>
 <script>
-try{if(typeof location!=='undefined'&&/(?:^|[?&#])device(?:$|[&=])/.test(location.search.slice(1)+'&'+location.hash.slice(1))){document.documentElement.classList.add('device');/* in its room, the page tells the room how tall it is, so the room grows to hold it and nothing scrolls inside a box */if(window.parent!==window&&typeof ResizeObserver!=='undefined'){var tellRoom=function(){try{window.parent.postMessage({stubbookHeight:Math.ceil(document.documentElement.scrollHeight)},'*')}catch(e){}};window.addEventListener('load',tellRoom);new ResizeObserver(tellRoom).observe(document.documentElement)}}}catch(e){}
+try{if(typeof location!=='undefined'&&/(?:^|[?&#])device(?:$|[&=])/.test(location.search.slice(1)+'&'+location.hash.slice(1))){document.documentElement.classList.add('device');if(/[?&]site(?:&|$)/.test(location.search))document.documentElement.classList.add('site');/* in its room, the page tells the room how tall it is, so the room grows to hold it and nothing scrolls inside a box */if(window.parent!==window&&typeof ResizeObserver!=='undefined'){var tellRoom=function(){try{window.parent.postMessage({stubbookHeight:Math.ceil(document.querySelector('.wrap').getBoundingClientRect().height)},'*')}catch(e){}};window.addEventListener('load',tellRoom);new ResizeObserver(tellRoom).observe(document.querySelector('.wrap'))}}}catch(e){}
 
 /* ============================================================================
-   STUBBOOK.  FellowSoft, run 0041. Stub, folded for the road.
+   STUB BOOK.  FellowSoft, run 0041. Stub, folded for the road.
 
    One document. The slate is a carved sculpt carried in as numbers, the paint
    on it is drawn on canvases at boot, and every sound is built out of
@@ -831,7 +868,7 @@ var Face = {
 
     // The cotton rag label on the lower panel.
     var lx = tx(-0.100), ly = ty(-0.362);
-    letterpress(g, 'STUBBOOK', lx, ly, 15, PAINT.manila, 3.2, 600);
+    letterpress(g, 'STUB BOOK', lx, ly, 15, PAINT.manila, 3.2, 600);
     letterpress(g, 'FELLOWSOFT', lx, ly + 17, 8, 'rgba(211,194,156,.62)', 2.6, 500);
     letterpress(g, 'STUB, FOLDED FOR THE ROAD', lx, ly + 30, 8, 'rgba(211,194,156,.45)', 1.6, 500);
 
@@ -1041,7 +1078,7 @@ var Back = {
     bg.addColorStop(0, '#c8a35c'); bg.addColorStop(0.5, '#9d7d3f'); bg.addColorStop(1, '#c0995a');
     g.fillStyle = bg; g.fillRect(px, py, pw, ph);
     g.strokeStyle = 'rgba(0,0,0,.4)'; g.strokeRect(px + 0.5, py + 0.5, pw - 1, ph - 1);
-    letterpress(g, 'STUBBOOK', px + 16, py + 26, 14, '#3a2c16', 2.6, 700);
+    letterpress(g, 'STUB BOOK', px + 16, py + 26, 14, '#3a2c16', 2.6, 700);
     letterpress(g, 'No. 0041', px + 16, py + 44, 9, 'rgba(58,44,22,.8)', 1.4, 500);
     letterpress(g, 'FELLOWSOFT', px + 16, py + 60, 9, 'rgba(58,44,22,.75)', 1.8, 500);
     letterpress(g, 'STUB, FOLDED FOR THE ROAD', px + 16, py + 74, 7.5, 'rgba(58,44,22,.6)', 1.1, 500);
@@ -1265,7 +1302,7 @@ var Page = {
 };
 
 var BOOT_LINES = [
-  'FELLOWSOFT STUBBOOK',
+  'FELLOWSOFT STUB BOOK',
   '. RUN 0041. STUB, FOLDED FOR THE ROAD',
   '',
   'POWER|THREE CELLS',
@@ -3446,7 +3483,7 @@ var LEAVES = [
    THE PITCH ALPHABET, once more, because it is what makes these readable.
    One character is one scale step. C is the tonic, G is the fifth, J is the
    octave. A dash holds the note before it. A dot is a rest. Percussion is the
-   Stubbook's own . x o, plus X for an accent and g for a ghost.
+   Stub Book's own . x o, plus X for an accent and g for a ghost.
    ========================================================================= */
 
 var THEME_SCHEMA = 'fellowsoft.music-theme/v1';
@@ -3472,7 +3509,7 @@ var FIRST_LIGHT = {
   schema: THEME_SCHEMA,
   name: 'First Light on the Long Meadow',
   maker: 'FellowSoft',
-  edition: 'Stubbook, run 0041',
+  edition: 'Stub Book, run 0041',
   say: 'Dawn over the whole field. The tune holds the house chime’s own note and the raised fourth lifts it once a phrase. The quietest bar is the one in the middle.',
   mode: 'lydian', tonic: 50, tonicName: 'D LYDIAN',
   bpm: 96, swing: 0.5, seed: 0x1a2b3c4d,
@@ -3485,7 +3522,7 @@ var FIRST_LIGHT = {
   sections: [
     [0, 'FIRST LIGHT', 72, 0, 0, 78],
     [8, 'THE FIELD WAKES', 86, 0, 0, 92],
-    [24, 'THE HOUSE AT WORK', 100, 0, 0, 100],
+    [24, 'HOME AT WORK', 100, 0, 0, 100],
     [40, 'THE TURN', 100, 0, 0, 104],
     [52, 'THE QUIET PART', 72, 0, 0, 72],
     [60, 'ALL OF IT', 100, 0, 0, 100],
@@ -3681,7 +3718,7 @@ var THE_HOUR = {
   schema: THEME_SCHEMA,
   name: 'The Hour',
   maker: 'FellowSoft',
-  edition: 'Stubbook, run 0041',
+  edition: 'Stub Book, run 0041',
   say: 'The whole day in four rooms of light. One tune, carried through dawn, day and dusk. At dusk the bright sixth goes out and at the end it comes back, which is the lamp.',
   mode: 'dorian', tonic: 57, tonicName: 'A DORIAN',
   bpm: 112, swing: 0.54, seed: 0x3d4e5f60,
@@ -3882,7 +3919,7 @@ var THE_HOUR = {
    THREE. THE LAMP IS NOT IN A HURRY.
 
    A suspended, which is the mode with no third at all, so it refuses to be
-   major or minor. The Stubbook's own Evening Bell leaf says why: "This is
+   major or minor. The Stub Book's own Evening Bell leaf says why: "This is
    where the voice sounds most like itself."
 
    It is a passacaglia. One four bar ground, A G D E, sixty four times, and
@@ -3898,7 +3935,7 @@ var THE_LAMP = {
   schema: THEME_SCHEMA,
   name: 'The Lamp Is Not in a Hurry',
   maker: 'FellowSoft',
-  edition: 'Stubbook, run 0041',
+  edition: 'Stub Book, run 0041',
   say: 'A passacaglia on one four bar ground, in the mode with no third in it. Eight notes of tune, five variations, no kick at any point, and a bar near the end where almost nothing happens.',
   mode: 'suspent', tonic: 57, tonicName: 'A SUSPENDED',
   bpm: 76, swing: 0.5, seed: 0x60718293,
@@ -4071,7 +4108,7 @@ var LEAD_CARD = FIRST_LIGHT;
 /* =========================================================================
    EXTENSION 12, THE SCORE.
 
-   The Stubbook's Transport is a sixteen step loop that reinterprets one leaf
+   The Stub Book's Transport is a sixteen step loop that reinterprets one leaf
    forever. That is the right machine for an instrument and the wrong one for a
    piece: a loop has no beginning, no middle and no end, and this card has to
    have all three.
@@ -4093,7 +4130,7 @@ var LEAD_CARD = FIRST_LIGHT;
      5  two octaves down   z  three and a half octaves up
 
    PERCUSSION uses . for a rest, x for a hit, X for an accent, g for a ghost,
-   and o for an open hat, which is what the Stubbook's own leaves already use.
+   and o for an open hat, which is what the Stub Book's own leaves already use.
    ========================================================================= */
 
 var ALPHABET = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
@@ -4276,7 +4313,7 @@ function compile(theme) {
    THE READER.
 
    The same twenty five millisecond timeout loop with a hundred and twenty
-   millisecond lookahead the Stubbook uses, widened on a stall, everything
+   millisecond lookahead the Stub Book uses, widened on a stall, everything
    scheduled against an absolute time computed from the piece's own start.
    ----------------------------------------------------------------------- */
 
@@ -4957,9 +4994,9 @@ function toggleKeep() {
   els.keep.setAttribute('aria-pressed', Bench.keep ? 'true' : 'false');
   if (Bench.keep) {
     silenceAll();
-    say('Keep. The slot is shuttered and Wake is pinned down. Nothing turns on or falls out.');
+    say('Travel lock is on. Sound is stopped and the controls are locked.');
   } else {
-    say('Keep released.');
+    say('Travel lock is off. Press Wake when you are ready.');
   }
 }
 
@@ -4985,6 +5022,8 @@ function silenceAll() {
 /* --- the leaf you keep --------------------------------------------------- */
 
 function printLeaf() {
+  $('keepsake').hidden = false;
+  $('printstatus').textContent = 'Your keepsake is below the controls. Save its image with your browser.';
   var c = els.leafout, g = c.getContext('2d');
   var W = c.width, H = c.height;
   g.fillStyle = '#d3c29c'; g.fillRect(0, 0, W, H);
@@ -4997,7 +5036,7 @@ function printLeaf() {
   g.strokeRect(28, 28, W - 56, H - 56);
 
   var L = Bench.leaf;
-  letterpress(g, 'STUBBOOK', 56, 92, 34, '#3a2c18', 5.5, 700);
+  letterpress(g, 'STUB BOOK', 56, 92, 34, '#3a2c18', 5.5, 700);
   letterpress(g, 'FELLOWSOFT . RUN 0041 . STUB, FOLDED FOR THE ROAD', 58, 118, 11, 'rgba(58,44,24,.68)', 2.4, 500);
   g.fillStyle = 'rgba(64,49,31,.5)';
   g.fillRect(56, 136, W - 112, 1);
@@ -5576,7 +5615,7 @@ function drawPressedFace(canvas, entry) {
    THE COLLECTION AND THE SLOT.
 
    The collection's direct manipulation: you click and pull the cards out of the
-   Stubbook, you pick from the collection, and you click and drag them in. The
+   Stub Book, you pick from the collection, and you click and drag them in. The
    interaction is the argument, because it shows the one thing a store cannot
    show, which is that the cards are yours and they are loose.
 
@@ -5733,8 +5772,8 @@ var Collection = {
     if (!entry.node) return;
     entry.node.setAttribute('aria-label', entry.name + '. ' + entry.meta + '. '
       + (seated
-        ? 'Fitted on the Stubbook. Enter plays or pauses it, T turns it over, Backspace pulls it out.'
-        : 'Press Enter to fit it on the Stubbook, or drag it up onto the crown.'));
+        ? 'Fitted on the Stub Book. Enter plays or pauses it, T turns it over, Backspace pulls it out.'
+        : 'Press Enter to fit it on the Stub Book, or drag it up onto the crown.'));
   },
 
   /* THE READ. The marks on the card are unpacked, mended against their own
@@ -5806,8 +5845,8 @@ var Collection = {
       Choir.allOff(t); Chip.allOff(t); Deep.off(t); Drum.choke(t);
     }
     if (!Sound.ready) {
-      this.readout(entry, 'Throw Wake to hear it');
-      if (!quiet) say('Fitted ' + theme.name + ', read back off its own marks. Throw Wake and it plays. ' + read);
+      this.readout(entry, 'Press Wake to hear it');
+      if (!quiet) say('Fitted ' + theme.name + ', read back off its own marks. Press Wake and it plays. ' + read);
       return;
     }
     Score.seat(theme);
@@ -5828,7 +5867,7 @@ var Collection = {
 
   readout: function (entry, state) {
     if (els.nowname) els.nowname.textContent = entry ? entry.name : 'Nothing is fitted';
-    if (els.nowsay) els.nowsay.textContent = entry ? entry.say : 'The crown is empty. Drag a card up onto the Stubbook, or press Enter on one.';
+    if (els.nowsay) els.nowsay.textContent = entry ? entry.say : 'The crown is empty. Drag a card up onto the Stub Book, or press Enter on one.';
     if (els.nowsection) els.nowsection.textContent = state;
   },
 
@@ -5907,7 +5946,7 @@ var Collection = {
     if (this.seated < 0) return;
     var entry = this.entries[this.seated];
     if (entry.kind !== 'theme') {
-      say('A leaf is a setting rather than a piece, so it plays as long as the Stubbook is awake.');
+      say('A leaf is a setting rather than a piece, so it plays as long as the Stub Book is awake.');
       return;
     }
     if (this.playing) {
@@ -6030,7 +6069,7 @@ var Collection = {
   /* THE SLOT IS ON THE OBJECT. Where the object is drawn in three dimensions
      the crown is projected through the renderer's own matrices and the test is
      a generous circle around it. Where it is drawn flat, the crown is the top
-     of the drawing. Either way, a near miss over the top of the Stubbook seats
+     of the drawing. Either way, a near miss over the top of the Stub Book seats
      the card, because a person aiming at a slowly turning slate is aiming at
      the right thing. */
   overSlot: function (x, y) {
@@ -6174,7 +6213,7 @@ function wake(after) {
       Choir.setRegister(Bench.register, ctx.currentTime);
       Choir.bellows = Bench.bellows;
       /* A card is what drives this instrument, so waking only starts a beat if
-         one is fitted. With the crown empty the Stubbook wakes and the Pad and
+         one is fitted. With the crown empty the Stub Book wakes and the Pad and
          the stops are live, and there is nothing running, which is the honest
          state of a reader with nothing in it. */
       if (Collection.seated >= 0 && Collection.entries[Collection.seated].kind === 'theme') {
@@ -6194,7 +6233,7 @@ function wake(after) {
         'RATE ........ ' + Math.round(Sound.sr) + ' HZ\n' +
         'VOICES ...... ' + counts[0] + ' OF ' + counts[1] + ' THROATS EACH');
       els.bootsay.textContent = 'Awake. Press a stop, or press the Pad. The first sound is at half velocity on purpose.';
-      say('The Stubbook is awake. Eight stops, the Pad, Hold, Voice, the Bellows and the Selector are live.');
+      say('The Stub Book is awake. Eight stops, the Pad, Hold, Voice, the Bellows and the Selector are live.');
       // the very first sound is deliberately quiet: a handheld that shouts the
       // first time it is switched on gets put down
       Choir.play('play', Music.hz(0, 0), 0.35, ctx.currentTime + 0.08);
@@ -6226,7 +6265,7 @@ function writtenFallback() {
     'chip layer and a synthesised kit, all of it built from oscillators and noise written in this ' +
     'document. Nothing was going to be downloaded to play it, so nothing is missing except the sound itself.';
   els.wake.disabled = true;
-  els.bootsay.textContent = 'The Stubbook is silent in this browser, and says so rather than pretending.';
+  els.bootsay.textContent = 'The Stub Book is silent in this browser, and says so rather than pretending.';
 }
 
 /* --- the loop ------------------------------------------------------------ */
@@ -6340,6 +6379,7 @@ function drawFlat() {
 function onKey(e) {
   var tag = (e.target && e.target.tagName) ? e.target.tagName.toLowerCase() : '';
   if (tag === 'input' || tag === 'textarea' || tag === 'select') return;
+  if ((tag === 'button' || tag === 'a') && (e.key === 'Enter' || e.key === ' ')) return;
   if (e.metaKey || e.ctrlKey || e.altKey) return;
   var k = e.key;
   var handled = true;
@@ -6467,7 +6507,7 @@ function begin() {
     $('stage').hidden = true;
     $('drawn').hidden = false;
     $('drawnwhy').textContent =
-      'This browser gives the page no WebGL, so the Stubbook is drawn flat here instead of turned. '
+      'This browser gives the page no WebGL, so the Stub Book is drawn flat here instead of turned. '
       + 'It is the same paint on the same object: the sculpt is simply not being lit. Everything the '
       + 'instrument does still works.';
   }
@@ -6495,7 +6535,7 @@ function begin() {
     Collection.readout(null, 'Nothing is fitted');
     if (els.readout) {
       els.readout.textContent = CAN_PRESS
-        ? 'Ten cards pressed in this page. Drag one up onto the Stubbook, or tab to it and press Enter.'
+        ? 'Ten cards pressed in this page. Drag one up onto the Stub Book, or tab to it and press Enter.'
         : 'This browser gives the page no compression, so no card could be pressed here and the faces say so.';
     }
     /* The object boots with a card in it, the way it always has, and the card

@@ -1,7 +1,7 @@
 {
   "schema": "fellowsoft.public-provenance/v1",
   "canonicalOrigin": "https://fellowsoft.net",
-  "reviewedOn": "2026-10-08",
+  "reviewedOn": "2026-10-09",
   "scope": "Reviewed assets and runtime sources carried by this public polish candidate.",
   "runtimeOrigins": [
     "https://api.weather.gov"
@@ -32,7 +32,7 @@
     {
       "id": "preview-household",
       "origin": "Fresh October 8 software captures of the invented North Hollow household.",
-      "privacy": "No real resident records. Arcade shows blank cartridge placeholders; Watch shows authored fictional catalogue entries; weather uses invented conditions. Phone is a browser layout, not a physical-device photograph.",
+      "privacy": "No real resident records. All household content is invented and weather uses demonstration conditions. Phone is a browser layout, not a physical-device photograph.",
       "freshPhotographs": 9,
       "reviewedFallbackPhotographs": 0,
       "transform": "Crop, proportional resize and quiet device edge on paper; no UI retouching; no metadata copied."
@@ -45,8 +45,19 @@
     },
     {
       "id": "window-glass",
-      "origin": "Rendered directly from the project-controlled canonical glass painter.",
+      "origin": "Rendered from the original canonical glass cuts: three indigo panes and the amber lamp pane. The public-only soft lead finish gently reduces metal contrast and cement shadow; geometry, came widths, glass colours and the canonical logo are unchanged. Other painter callers retain the original finish.",
       "privacy": "Decorative illustration only."
+    },
+    {
+      "id": "living-world",
+      "origin": "Kept, a FellowSoft-authored score and rendered excerpt from the enhanced Stub music language.",
+      "privacy": "No resident household records. Audio is visitor initiated."
+    },
+    {
+      "id": "responsive-garden",
+      "origin": "400px and 800px proportional derivatives of the reviewed invented North Hollow Garden photographs.",
+      "privacy": "The original composition and demonstration records are unchanged.",
+      "transform": "Resize only; original 1600px photographs remain available."
     }
   ],
   "type": {
@@ -57,7 +68,8 @@
   "browserState": {
     "intro": "One session-only flag remembers whether the arrival animation has played. It contains no identity or visit log.",
     "instrument": "The Stubbook runs locally in a sandboxed frame, synthesizes its own music, and makes no network request.",
-    "specimen": "The public compiler and curated PlainLedger runtime operate in memory. The specimen calls no model, network or persistent storage. Reloading clears its visitor-entered rows."
+    "specimen": "The public compiler and curated PlainLedger runtime operate in memory. The specimen calls no model, network or persistent storage. Reloading clears its visitor-entered rows. A downloaded tool includes the rows the visitor chooses to keep. A Loom Card carries only the design; its recovered tool starts with empty rows.",
+    "recipe": "The public Kitchen Rolodex holds selections, quantity factors and cooking progress per recipe in memory for this visit; the visitor may download a text copy. No model or private record book is contacted."
   },
   "assets": [
     {
@@ -158,7 +170,7 @@
       "path": "media/polish/house-phone.webp",
       "family": "preview-household",
       "sha256": "63ec64dfdedcc4bb1e5d23ef3ecb12b5fbddd08a1ac29d78f49463a2d226762d",
-      "alt": "A close view of the House’s Cuttings journal in its phone layout, with an invented garden quotation."
+      "alt": "A close view of FellowSoft Home’s Cuttings journal in its phone layout, with an invented garden quotation."
     },
     {
       "path": "media/polish/house-weather-loop.webp",
@@ -199,22 +211,86 @@
     {
       "path": "media/window/field-notes.webp",
       "family": "window-glass",
-      "sha256": "6ce5eaf093609963b169848a2c3fcd809cfd006a5da3ef1d84d1edfb54774522"
+      "sha256": "2cdee177d5118b1afca6e46f3c267675325408e83415ca0d1a24e15dff7c366f"
     },
     {
       "path": "media/window/here.webp",
       "family": "window-glass",
-      "sha256": "0be2b58f35f6d1caeea3483fa67428118fb5e1d2d44c27d17199abcc6ba5a9eb"
+      "sha256": "25185d966bc59569aa0c94009d34569ba81950c5a5d78a689ec8b45fd0d40a2d"
     },
     {
       "path": "media/window/home.webp",
       "family": "window-glass",
-      "sha256": "55af8ef04011c676c1738b466fe684a40ceb33e654564e704a2faa0784974274"
+      "sha256": "3cd711b6491590cd17ce6844e7e4f7bed40898c82b5c877b36089f44e7be345c"
     },
     {
       "path": "media/window/work.webp",
       "family": "window-glass",
-      "sha256": "a33447acad73bfeb039c0a79f10615bcd6e2a63010903ad7195af91e82decc9f"
+      "sha256": "a3925ac904f7e1551e8aded9be16dad44ab756ed3fd21eb2cad12ae95611f0e9"
+    },
+    {
+      "path": "media/living/kept-excerpt.m4a",
+      "family": "living-world",
+      "sha256": "b5ed39d8820a0596608bdb5122fd1a061c8a17138a388cd772d326213570171a"
+    },
+    {
+      "path": "media/living/kept-score.json",
+      "family": "living-world",
+      "sha256": "55cfb422afc068b7388a95590af2a1cc6202da8ee94278423caa9c45d3499611"
+    },
+    {
+      "path": "media/polish/garden-cuttings-400.webp",
+      "family": "responsive-garden",
+      "source": "media/polish/garden-cuttings.webp",
+      "width": 400,
+      "height": 250,
+      "sha256": "c15b890fa94a6c12581a4b71fce90aa4b33769a9220f557cf2c6e2aa23eb11aa",
+      "alt": "The Cuttings writing tools above an invented garden quotation, with a tag, heart and scissors."
+    },
+    {
+      "path": "media/polish/garden-cuttings-800.webp",
+      "family": "responsive-garden",
+      "source": "media/polish/garden-cuttings.webp",
+      "width": 800,
+      "height": 500,
+      "sha256": "0d12e12a02c5efd1f045d99033aac7bb4d9e0e761f6ec62dc84c9ee6b4b19708",
+      "alt": "The Cuttings writing tools above an invented garden quotation, with a tag, heart and scissors."
+    },
+    {
+      "path": "media/polish/garden-plots-shelf-400.webp",
+      "family": "responsive-garden",
+      "source": "media/polish/garden-plots-shelf.webp",
+      "width": 400,
+      "height": 250,
+      "sha256": "4af63ec8f6e9fdbea145e1f9b432d2cbfe75734d56ab7751bc5b5c74decd2d60",
+      "alt": "The Plots shelf for this year, with three garden projects, their drawings and their budgets."
+    },
+    {
+      "path": "media/polish/garden-plots-shelf-800.webp",
+      "family": "responsive-garden",
+      "source": "media/polish/garden-plots-shelf.webp",
+      "width": 800,
+      "height": 500,
+      "sha256": "4ad4c5a7b3ccb7da97308254bbdd39f25fcde285f5ce946d8bd40fac15eb3189",
+      "alt": "The Plots shelf for this year, with three garden projects, their drawings and their budgets."
+    },
+    {
+      "path": "media/polish/garden-plan-400.webp",
+      "family": "responsive-garden",
+      "source": "media/polish/garden-plan.webp",
+      "width": 400,
+      "height": 250,
+      "sha256": "470f423fd3bab94da2dd82fac44e14b150a68c0f8226ff981d6ee767c2f44bb5",
+      "alt": "The garden plan in daylight, with a labelled long border and six dreamed plants beside the path."
+    },
+    {
+      "path": "media/polish/garden-plan-800.webp",
+      "family": "responsive-garden",
+      "source": "media/polish/garden-plan.webp",
+      "width": 800,
+      "height": 500,
+      "sha256": "1d8e0bad8cdd730ee9e1b060c515d6f86f07e7b7d6de98e303ed56b5ebae8ee7",
+      "alt": "The garden plan in daylight, with a labelled long border and six dreamed plants beside the path."
     }
   ],
   "fontFiles": [
