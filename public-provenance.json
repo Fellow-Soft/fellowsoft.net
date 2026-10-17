@@ -1,7 +1,7 @@
 {
   "schema": "fellowsoft.public-provenance/v1",
   "canonicalOrigin": "https://fellowsoft.net",
-  "reviewedOn": "2026-10-09",
+  "reviewedOn": "2026-10-16",
   "scope": "Reviewed assets and runtime sources carried by this public polish candidate.",
   "runtimeOrigins": [
     "https://api.weather.gov"
@@ -58,6 +58,12 @@
       "origin": "400px and 800px proportional derivatives of the reviewed invented North Hollow Garden photographs.",
       "privacy": "The original composition and demonstration records are unchanged.",
       "transform": "Resize only; original 1600px photographs remain available."
+    },
+    {
+      "id": "film",
+      "origin": "A Day to Keep, the FellowSoft-authored 48 second film of October 14, 2026: the marsh, the Window and Stub, drawn and scored in code. Web copies at 1080p and 720p; the poster and English captions are the cut's own.",
+      "privacy": "Illustration, music and on-screen words only. No person, household, place record or voice is shown or heard.",
+      "transform": "H.264 re-encodes of the reviewed master at constant quality 23 with fast start; the sound is copied unchanged; metadata removed."
     }
   ],
   "type": {
@@ -67,9 +73,9 @@
   },
   "browserState": {
     "intro": "One session-only flag remembers whether the arrival animation has played. It contains no identity or visit log.",
-    "instrument": "The Stubbook runs locally in a sandboxed frame, synthesizes its own music, and makes no network request.",
     "specimen": "The public compiler and curated PlainLedger runtime operate in memory. The specimen calls no model, network or persistent storage. Reloading clears its visitor-entered rows. A downloaded tool includes the rows the visitor chooses to keep. A Loom Card carries only the design; its recovered tool starts with empty rows.",
-    "recipe": "The public Kitchen Rolodex holds selections, quantity factors and cooking progress per recipe in memory for this visit; the visitor may download a text copy. No model or private record book is contacted."
+    "recipe": "The public Kitchen Rolodex holds selections, quantity factors and cooking progress per recipe in memory for this visit; the visitor may download a text copy. No model or private record book is contacted.",
+    "film": "A Day to Keep is requested from this site only after a visitor presses Stub. It plays in the page and nothing about the viewing is kept."
   },
   "assets": [
     {
@@ -291,6 +297,34 @@
       "height": 500,
       "sha256": "1d8e0bad8cdd730ee9e1b060c515d6f86f07e7b7d6de98e303ed56b5ebae8ee7",
       "alt": "The garden plan in daylight, with a labelled long border and six dreamed plants beside the path."
+    },
+    {
+      "path": "media/film/a-day-to-keep-1080.mp4",
+      "family": "film",
+      "width": 1920,
+      "height": 1080,
+      "duration": 48,
+      "sha256": "418dd1e7390ae95a3f0f99de213fedf044a5c5c40a7855dca48491b83b5c792c"
+    },
+    {
+      "path": "media/film/a-day-to-keep-720.mp4",
+      "family": "film",
+      "width": 1280,
+      "height": 720,
+      "duration": 48,
+      "sha256": "3c5eb129815b6bc84984dc4b908be4a7a7021d8cf5879239b0e54d261ca894d6"
+    },
+    {
+      "path": "media/film/a-day-to-keep-poster.jpg",
+      "family": "film",
+      "width": 960,
+      "height": 540,
+      "sha256": "b9e315df7c7642dd3dabec3a911afb3f0466d03e30fa74d788ae745a32e6ebe0"
+    },
+    {
+      "path": "media/film/a-day-to-keep.en.vtt",
+      "family": "film",
+      "sha256": "4937c78ef1b2dce9cdd4e9a7c448b9cc881a72a068f502df05b9a8eb84aad8b2"
     }
   ],
   "fontFiles": [
@@ -376,6 +410,11 @@
       "id": "field-preview-night-live",
       "mimeType": "image/webp",
       "sha256": "f04ed1c55b7961bacf5c83b037d73cdfca73a4559a03f410c362a30ee8028320"
+    },
+    {
+      "id": "stub-badge-free",
+      "mimeType": "image/svg+xml",
+      "sha256": "bf387577b539c557f452cd9d0c1fb8b144997871971d6bbf0791191e42aac590"
     }
   ]
 }
