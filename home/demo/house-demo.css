@@ -1,0 +1,102 @@
+/* The one thing the demo draws that the house does not: a small slip saying whose
+   eyes the visitor is looking through, and the way to the other resident's.
+   It sits low on the left, out of the way of the window, the sill and the rail,
+   in the house's own paper and ink and its own sans. */
+.house-demo-eyes {
+  position: fixed;
+  z-index: 2147483000;
+  left: max(12px, env(safe-area-inset-left));
+  bottom: calc(var(--house-demo-lift, 0px) + max(10px, env(safe-area-inset-bottom)));
+  display: flex;
+  align-items: baseline;
+  gap: .65em;
+  max-width: calc(100vw - 24px);
+  padding: .42em .8em .46em;
+  border-radius: 999px;
+  background: color-mix(in srgb, #F3EBDA 88%, transparent);
+  color: #2E2A24;
+  box-shadow: 0 1px 0 rgba(46, 42, 36, .08), 0 6px 18px -8px rgba(46, 42, 36, .35);
+  -webkit-backdrop-filter: blur(10px) saturate(1.1);
+  backdrop-filter: blur(10px) saturate(1.1);
+  font: 500 12px/1.2 'DM Sans', system-ui, sans-serif;
+  letter-spacing: .01em;
+  pointer-events: auto;
+}
+.house-demo-eyes span { opacity: .78; white-space: nowrap; }
+.house-demo-eyes a {
+  color: inherit;
+  white-space: nowrap;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .2em;
+  text-decoration-color: rgba(46, 42, 36, .35);
+}
+.house-demo-eyes a:hover, .house-demo-eyes a:focus-visible { text-decoration-color: currentColor; }
+.house-demo-eyes a:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; border-radius: 4px; }
+:root[data-theme="dark"] .house-demo-eyes { background: color-mix(in srgb, #2E2A24 86%, transparent); color: #F3EBDA; }
+:root[data-theme="dark"] .house-demo-eyes a { text-decoration-color: rgba(243, 235, 218, .4); }
+:root[data-profile="television"] .house-demo-eyes { font-size: 15px; left: 2vw; bottom: calc(var(--house-demo-lift, 0px) + 2vh); }
+/* At ten feet the slip is folded too, since a remote does not press it and a room's words reach the corners. */
+:root[data-profile="television"] .house-demo-eyes:not([data-open]) { padding: 0; gap: 0; border-radius: 50%; }
+:root[data-profile="television"] .house-demo-eyes:not([data-open]) > span, :root[data-profile="television"] .house-demo-eyes:not([data-open]) > a { display: none; }
+:root[data-profile="television"] .house-demo-eyes:not([data-open]) .house-demo-initial { display: inline-flex; }
+
+/* On a narrow screen the slip folds to a round tab with the first letter of the name it looks through,
+   in the corner, so it never stands over a room's words; pressed, it opens to the whole slip. */
+.house-demo-eyes .house-demo-initial { display: none; }
+@media (max-width: 599px), (max-height: 499px) {
+  .house-demo-eyes { left: max(8px, env(safe-area-inset-left)); bottom: calc(var(--house-demo-lift, 0px) + max(8px, env(safe-area-inset-bottom))); }
+  .house-demo-eyes:not([data-open]) { padding: 0; gap: 0; border-radius: 50%; }
+  .house-demo-eyes:not([data-open]) > span, .house-demo-eyes:not([data-open]) > a { display: none; }
+  .house-demo-eyes:not([data-open]) .house-demo-initial { display: inline-flex; }
+}
+.house-demo-initial {
+  appearance: none;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: inherit;
+  font: italic 400 16px/1 'Instrument Serif', Georgia, serif;
+  cursor: pointer;
+}
+.house-demo-initial:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+
+/* The shelf's player: the film over the room, on the house's dark glass, with one way back. */
+.house-demo-player {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483100;
+  display: grid;
+  place-items: center;
+  padding: max(16px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) max(16px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+  background: rgba(22, 24, 26, .86);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+.house-demo-player figure { margin: 0; width: min(1120px, 100%); display: grid; gap: 10px; }
+.house-demo-player video { width: 100%; max-height: calc(100vh - 96px); background: #101214; border-radius: 6px; box-shadow: 0 18px 50px -20px rgba(0, 0, 0, .7); }
+.house-demo-player figcaption { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; color: #F3EBDA; font: 500 13px/1.3 'DM Sans', system-ui, sans-serif; }
+.house-demo-player figcaption span { font: italic 400 20px/1.2 'Instrument Serif', Georgia, serif; }
+.house-demo-player button {
+  appearance: none;
+  border: 1px solid rgba(243, 235, 218, .45);
+  border-radius: 999px;
+  padding: .4em .9em;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  letter-spacing: .02em;
+  cursor: pointer;
+}
+.house-demo-player button:focus-visible { outline: 2px solid #F3EBDA; outline-offset: 2px; }
+:root[data-profile="television"] .house-demo-player figcaption { font-size: 18px; }
+
+/* The keys that would only add, left off the paper (transport.js, QUIET). */
+[data-house-demo-quiet] { display: none !important; }
+@media print { .house-demo-eyes, .house-demo-player { display: none; } }

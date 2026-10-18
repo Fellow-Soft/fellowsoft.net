@@ -1,0 +1,221 @@
+{
+  "source": "FellowSoft Home botanical library, version 1",
+  "plants": [
+    {
+      "id": "allium-tricoccum",
+      "common": "Wild ramp",
+      "cultivar": null,
+      "botanical": "Allium tricoccum",
+      "family": "Amaryllidaceae",
+      "habit": "bulb",
+      "note": "Broad leaves come up before the trees leaf out and are gone by early summer; a patch takes years to build."
+    },
+    {
+      "id": "trillium-grandiflorum",
+      "common": "White trillium",
+      "cultivar": null,
+      "botanical": "Trillium grandiflorum",
+      "family": "Melanthiaceae",
+      "habit": "perennial",
+      "note": "Three pristine white petals fade to soft pink before summer dormancy claims the forest floor."
+    },
+    {
+      "id": "cercis-canadensis",
+      "common": "Eastern redbud",
+      "cultivar": null,
+      "botanical": "Cercis canadensis",
+      "family": "Fabaceae",
+      "habit": "tree",
+      "note": "Pea blossoms burst straight out of bare dark wood before the heart-shaped leaves unfurl."
+    },
+    {
+      "id": "amelanchier-canadensis",
+      "common": "Serviceberry",
+      "cultivar": null,
+      "botanical": "Amelanchier canadensis",
+      "family": "Rosaceae",
+      "habit": "tree",
+      "note": "White star blossoms open as shad run up the rivers; dark purple berries ripen by midsummer."
+    },
+    {
+      "id": "pisum-sativum-charmette",
+      "common": "Shelling pea",
+      "cultivar": "Charmette",
+      "botanical": "Pisum sativum",
+      "family": "Fabaceae",
+      "habit": "annual",
+      "note": "Short trellised vines of small plump pods, shelled for very small sweet peas rather than eaten whole."
+    },
+    {
+      "id": "fragaria-ananassa-fairfax",
+      "common": "Strawberry",
+      "cultivar": "Fairfax",
+      "botanical": "Fragaria × ananassa",
+      "family": "Rosaceae",
+      "habit": "perennial",
+      "note": "An old June-bearing berry, small and dark red, soft and very sweet; it bears one heavy crop and is gone."
+    },
+    {
+      "id": "lavandula-angustifolia-munstead",
+      "common": "English lavender",
+      "cultivar": "Munstead",
+      "botanical": "Lavandula angustifolia",
+      "family": "Lamiaceae",
+      "habit": "subshrub",
+      "note": "Silver-grey aromatic foliage and dense purple spires; loves gravelly soil and baking sun."
+    },
+    {
+      "id": "nigella-damascena",
+      "common": "Love-in-a-mist",
+      "cultivar": null,
+      "botanical": "Nigella damascena",
+      "family": "Ranunculaceae",
+      "habit": "annual",
+      "note": "Blue flowers in a mist of threadlike leaves, followed by inflated horned seed capsules. A spring and early-summer annual."
+    },
+    {
+      "id": "papaver-rhoeas-amazing-grey",
+      "common": "Corn poppy",
+      "cultivar": "Amazing Grey",
+      "botanical": "Papaver rhoeas",
+      "family": "Papaveraceae",
+      "habit": "annual",
+      "note": "Crumpled silver-grey and smoky lavender petals around dark stamens; hairy stems and nodding buds. An annual Shirley poppy."
+    },
+    {
+      "id": "echinacea-purpurea",
+      "common": "Purple coneflower",
+      "cultivar": null,
+      "botanical": "Echinacea purpurea",
+      "family": "Asteraceae",
+      "habit": "perennial",
+      "note": "Stout prickly cones ringed by swept-back magenta rays; feeds native bees and winter goldfinches."
+    },
+    {
+      "id": "asclepias-tuberosa",
+      "common": "Butterfly weed",
+      "cultivar": null,
+      "botanical": "Asclepias tuberosa",
+      "family": "Apocynaceae",
+      "habit": "perennial",
+      "note": "Blazing fiery orange flat-topped clusters; essential host plant for monarch butterfly caterpillars."
+    },
+    {
+      "id": "monarda-fistulosa",
+      "common": "Wild bergamot",
+      "cultivar": null,
+      "botanical": "Monarda fistulosa",
+      "family": "Lamiaceae",
+      "habit": "perennial",
+      "note": "Shaggy lavender-pink tubular crowns aromatic with oregano-thyme oils; bumblebees crowd the heads."
+    },
+    {
+      "id": "tropaeolum-majus-tip-top-mahogany",
+      "common": "Nasturtium",
+      "cultivar": "Tip Top Mahogany",
+      "botanical": "Tropaeolum majus",
+      "family": "Tropaeolaceae",
+      "habit": "annual",
+      "note": "Deep red-brown blooms that read nearly black in shade, on a compact plant that stays put in a pot."
+    },
+    {
+      "id": "solanum-lycopersicum-brandywine",
+      "common": "Tomato",
+      "cultivar": "Brandywine",
+      "botanical": "Solanum lycopersicum",
+      "family": "Solanaceae",
+      "habit": "annual",
+      "note": "Potato-leaf Amish heirloom; legendary luscious pink beefsteaks balance deep sweetness and rich acidity."
+    },
+    {
+      "id": "vaccinium-corymbosum-bluecrop",
+      "common": "Highbush blueberry",
+      "cultivar": "Bluecrop",
+      "botanical": "Vaccinium corymbosum",
+      "family": "Ericaceae",
+      "habit": "shrub",
+      "note": "White heather-bells give way to sweet powder-blue berries; fiery scarlet autumn foliage."
+    },
+    {
+      "id": "beta-vulgaris-chard",
+      "common": "Swiss chard",
+      "cultivar": "Bright Lights",
+      "botanical": "Beta vulgaris",
+      "family": "Amaranthaceae",
+      "habit": "biennial",
+      "note": "Glossy puckered leaves on stems of red, gold and pink; cut the outer ones and it keeps going until hard frost."
+    },
+    {
+      "id": "helianthus-annuus-teddy-bear",
+      "common": "Sunflower",
+      "cultivar": "Teddy Bear",
+      "botanical": "Helianthus annuus",
+      "family": "Asteraceae",
+      "habit": "annual",
+      "note": "A dwarf sunflower with fully double golden pompom flowers and no dark centre, soft and round like a dandelion clock."
+    },
+    {
+      "id": "rudbeckia-fulgida-goldsturm",
+      "common": "Black-eyed Susan",
+      "cultivar": "Goldsturm",
+      "botanical": "Rudbeckia fulgida",
+      "family": "Asteraceae",
+      "habit": "perennial",
+      "note": "Radiant golden-orange daisies with dark chocolate central cones; long-lasting backbone of the summer border."
+    },
+    {
+      "id": "symphyotrichum-novae-angliae",
+      "common": "New England aster",
+      "cultivar": null,
+      "botanical": "Symphyotrichum novae-angliae",
+      "family": "Asteraceae",
+      "habit": "perennial",
+      "note": "Vivid royal purple rays with golden centers celebrate the autumn equinox until heavy frost."
+    },
+    {
+      "id": "rhus-typhina",
+      "common": "Staghorn sumac",
+      "cultivar": null,
+      "botanical": "Rhus typhina",
+      "family": "Anacardiaceae",
+      "habit": "shrub",
+      "note": "Velvet-furred twigs hold crimson fruit cones through the winter; the long compound leaves go scarlet in fall."
+    },
+    {
+      "id": "cydonia-oblonga-meechs-prolific",
+      "common": "Quince",
+      "cultivar": "Meech's Prolific",
+      "botanical": "Cydonia oblonga",
+      "family": "Rosaceae",
+      "habit": "tree",
+      "note": "Big golden quinces that scent a whole room; hard and sour raw, they are cooked into paste and jelly."
+    },
+    {
+      "id": "cucurbita-pepo-small-sugar",
+      "common": "Sugar pumpkin",
+      "cultivar": "Small Sugar",
+      "botanical": "Cucurbita pepo",
+      "family": "Cucurbitaceae",
+      "habit": "annual",
+      "note": "Classic round heirloom pie pumpkin with dense sweet fine-grained flesh; trailing vines ramble across the garden."
+    },
+    {
+      "id": "raphanus-sativus-chinese-red-meat",
+      "common": "Watermelon radish",
+      "cultivar": "Chinese Red Meat",
+      "botanical": "Raphanus sativus",
+      "family": "Brassicaceae",
+      "habit": "annual",
+      "note": "A fat pale root grown in the cool end of the year; cut across, the flesh is magenta inside a green rim."
+    },
+    {
+      "id": "sassafras-albidum",
+      "common": "Sassafras",
+      "cultivar": null,
+      "botanical": "Sassafras albidum",
+      "family": "Lauraceae",
+      "habit": "tree",
+      "note": "Leaves come three ways on one tree, plain, mitten and three-lobed; fall runs orange through scarlet."
+    }
+  ]
+}

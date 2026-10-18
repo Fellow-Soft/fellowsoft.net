@@ -1,0 +1,91 @@
+{
+  "revision": "live-world-04",
+  "place": "woods",
+  "source": "source-blender/Sanctuary - live04.blend",
+  "units": "metres; glTF Y up",
+  "lights": [
+    {
+      "name": "Sheltered path light 0",
+      "position": [
+        -1.6975290775299072,
+        -0.036485034972429276,
+        4.170000076293945
+      ],
+      "energy": 5.0,
+      "color": [
+        1.0,
+        0.6172065734863281,
+        0.31398871541023254
+      ],
+      "distance_to_camera": 3.052515042773273
+    },
+    {
+      "name": "Sheltered path light 1",
+      "position": [
+        1.1964105367660522,
+        0.3851577639579773,
+        -0.7099999785423279
+      ],
+      "energy": 5.0,
+      "color": [
+        1.0,
+        0.6172065734863281,
+        0.31398871541023254
+      ],
+      "distance_to_camera": 6.443090636172542
+    },
+    {
+      "name": "Sheltered path light 2",
+      "position": [
+        -0.2944919764995575,
+        0.687222421169281,
+        -5.590000152587891
+      ],
+      "energy": 5.0,
+      "color": [
+        1.0,
+        0.6172065734863281,
+        0.31398871541023254
+      ],
+      "distance_to_camera": 11.166627884140325
+    },
+    {
+      "name": "Sheltered path light 3",
+      "position": [
+        2.388889789581299,
+        0.48957112431526184,
+        -10.470000267028809
+      ],
+      "energy": 5.0,
+      "color": [
+        1.0,
+        0.6172065734863281,
+        0.31398871541023254
+      ],
+      "distance_to_camera": 16.163388761378275
+    },
+    {
+      "name": "Sanctuary sheltered lantern",
+      "position": [
+        6.550000190734863,
+        0.13188470900058746,
+        -16.0
+      ],
+      "energy": 65.0,
+      "color": [
+        1.0,
+        0.5906188488006592,
+        0.2345505803823471
+      ],
+      "distance_to_camera": 22.45583265592527
+    }
+  ],
+  "bytes": 23363636,
+  "camera": [
+    0.30000001192092896,
+    -5.5,
+    1.850000023841858
+  ],
+  "botanical_tiers": 14,
+  "presentation": "live geometry; no rendered scene plates"
+}

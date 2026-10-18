@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" role="img" aria-label="the ground floor, sketched with a tape and a pencil">
+  <rect width="400" height="300" fill="#f3ecdb"/>
+  <g fill="none" stroke="#33322c" stroke-width="4">
+    <rect x="30" y="30" width="340" height="240"/>
+    <line x1="30" y1="150" x2="200" y2="150"/>
+    <line x1="200" y1="30" x2="200" y2="270"/>
+    <line x1="200" y1="170" x2="370" y2="170"/>
+  </g>
+  <g fill="none" stroke="#f3ecdb" stroke-width="6">
+    <line x1="120" y1="150" x2="160" y2="150"/>
+    <line x1="200" y1="90" x2="200" y2="130"/>
+    <line x1="290" y1="170" x2="330" y2="170"/>
+  </g>
+  <g fill="#6a6558" font-family="Georgia, serif" font-size="13">
+    <text x="48" y="88">front hall</text>
+    <text x="48" y="212">parlour</text>
+    <text x="218" y="88">kitchen</text>
+    <text x="218" y="228">dining</text>
+    <text x="30" y="292">32 ft across the front, taken at the sill</text>
+  </g>
+  <g stroke="#8a6b3a" stroke-width="2" fill="none">
+    <line x1="30" y1="284" x2="370" y2="284"/>
+    <line x1="30" y1="278" x2="30" y2="290"/>
+    <line x1="370" y1="278" x2="370" y2="290"/>
+  </g>
+</svg>

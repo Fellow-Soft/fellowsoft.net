@@ -1,7 +1,7 @@
 {
   "schema": "fellowsoft.public-provenance/v1",
   "canonicalOrigin": "https://fellowsoft.net",
-  "reviewedOn": "2026-10-16",
+  "reviewedOn": "2026-10-17",
   "scope": "Reviewed assets and runtime sources carried by this public polish candidate.",
   "runtimeOrigins": [
     "https://api.weather.gov"
@@ -64,6 +64,30 @@
       "origin": "A Day to Keep, the FellowSoft-authored 48 second film of October 14, 2026: the marsh, the Window and Stub, drawn and scored in code. Web copies at 1080p and 720p; the poster and English captions are the cut's own.",
       "privacy": "Illustration, music and on-screen words only. No person, household, place record or voice is shown or heard.",
       "transform": "H.264 re-encodes of the reviewed master at constant quality 23 with fast start; the sound is copied unchanged; metadata removed."
+    },
+    {
+      "id": "stub-folds-north-hollow",
+      "origin": "A software capture, made October 17, 2026 in headless Chromium, of the front of North Hollow, the sealed FellowSoft Home demonstration this site carries at /home/demo/. Shown in North Hollow's window on Stub's paper until the live demonstration has loaded.",
+      "privacy": "Invented household; no resident records. Its sky and weather are the demonstration's own.",
+      "transform": "Captured at 1200 by 600 CSS pixels at 1.5x, resized to 1600 by 800 and encoded as WebP at quality 80; no retouching, no metadata."
+    },
+    {
+      "id": "stub-folds-listening",
+      "origin": "Out the Window, FellowSoft's weather album of October 14, 2026: thirteen pieces synthesized in code on the house score engine (the instruments and room of the film A Day to Keep), its album.json and its cover, carried byte for byte.",
+      "privacy": "Music only. No voice, no sample, no recording and no model. Nothing is requested until the Listening fold is opened, and no piece plays until it is pressed.",
+      "transform": "None. AAC at 128 kb/s, 48 kHz stereo, each piece at -16 LUFS integrated."
+    },
+    {
+      "id": "stub-folds-marsh",
+      "origin": "The house's own Finger Lakes marsh painter (finger-lakes.js and reading-adapter.mjs), as the FellowSoft television bundles it for Chrome 120, carried byte for byte. It draws the marsh in the visitor's browser from the site's own sky for the chosen hour.",
+      "privacy": "Code only. It reads no clock, location, storage or network of its own; it is imported only when the living marsh is opened.",
+      "transform": "None."
+    },
+    {
+      "id": "stub-folds-plants",
+      "origin": "Twenty-four of FellowSoft Home's botanical stamps from its first reviewed collection of October 11, 2026, at 512 and 128 pixels, with a catalogue of their names, family, habit and note written from the house's species library (scripts/build-stub-folds-media.mjs). The stamps are original illustrations made for the house with an image-generation model from each plant's own record and the house's stamp brief; botanical references informed anatomy only and no photograph was traced or incorporated.",
+      "privacy": "Botanical illustration and plant facts only. The library's safety fields, which are not yet reviewed, are not carried.",
+      "transform": "Stamps unchanged. The catalogue keeps a variety's apostrophe where the record keeps one among its other names, and capitalizes each note's first word."
     }
   ],
   "type": {
@@ -75,7 +99,8 @@
     "intro": "One session-only flag remembers whether the arrival animation has played. It contains no identity or visit log.",
     "specimen": "The public compiler and curated PlainLedger runtime operate in memory. The specimen calls no model, network or persistent storage. Reloading clears its visitor-entered rows. A downloaded tool includes the rows the visitor chooses to keep. A Loom Card carries only the design; its recovered tool starts with empty rows.",
     "recipe": "The public Kitchen Rolodex holds selections, quantity factors and cooking progress per recipe in memory for this visit; the visitor may download a text copy. No model or private record book is contacted.",
-    "film": "A Day to Keep is requested from this site only after a visitor presses Stub. It plays in the page and nothing about the viewing is kept."
+    "film": "A Day to Keep is requested from this site only after a visitor presses Stub. It plays in the page and nothing about the viewing is kept.",
+    "stubFolds": "Stub's folds keep nothing between visits: which page is open, the album's place and the marsh's hour live in memory and are gone when his paper closes."
   },
   "assets": [
     {
@@ -325,6 +350,450 @@
       "path": "media/film/a-day-to-keep.en.vtt",
       "family": "film",
       "sha256": "4937c78ef1b2dce9cdd4e9a7c448b9cc881a72a068f502df05b9a8eb84aad8b2"
+    },
+    {
+      "path": "media/hollow/north-hollow-front.webp",
+      "family": "stub-folds-north-hollow",
+      "width": 1600,
+      "height": 800,
+      "sha256": "e555a95182101a891f5c845323ed75872144c97df0d78bda2f065fb74fcdd4a3"
+    },
+    {
+      "path": "media/listening/01-clear-morning.m4a",
+      "family": "stub-folds-listening",
+      "duration": 207,
+      "sha256": "65a5c499a386205ff5cfd72f7d8811fcd6411363ddaa30366dd199c44036775d"
+    },
+    {
+      "path": "media/listening/02-afternoon-sun.m4a",
+      "family": "stub-folds-listening",
+      "duration": 204.3,
+      "sha256": "35474cf75d10a24fca790416e0d78c84a5fb15852b1eff2c1766581f255374b8"
+    },
+    {
+      "path": "media/listening/03-warm-and-humid.m4a",
+      "family": "stub-folds-listening",
+      "duration": 211.6,
+      "sha256": "b7ed114488e9384f0463b6628ed82ba6bad24d5849d11ef2310dca3401014a8c"
+    },
+    {
+      "path": "media/listening/04-windy.m4a",
+      "family": "stub-folds-listening",
+      "duration": 190.5,
+      "sha256": "f7b351d8785cd171f0ee72e8109defead55e4417928c0382a20c2cd4c57112a1"
+    },
+    {
+      "path": "media/listening/05-grey-skies.m4a",
+      "family": "stub-folds-listening",
+      "duration": 207.3,
+      "sha256": "ffe27f65ae0484cb4af8e9b5811607df35d13b0c7bdef7907053c961a9df8f9e"
+    },
+    {
+      "path": "media/listening/06-fog.m4a",
+      "family": "stub-folds-listening",
+      "duration": 227.7,
+      "sha256": "0dc9ad84ba6194ebf7eb4e948c6845750d714b2b2f51192c8a184c4dc52415d0"
+    },
+    {
+      "path": "media/listening/07-light-rain.m4a",
+      "family": "stub-folds-listening",
+      "duration": 202,
+      "sha256": "8843f08dbf947a2ec92a3a595c76732ea71119a58b10a85983eb5f74fb5db478"
+    },
+    {
+      "path": "media/listening/08-steady-rain.m4a",
+      "family": "stub-folds-listening",
+      "duration": 191,
+      "sha256": "993938f461bc67c64a941cd6681b8860fe22ef98b011a00e2dc75569e101ed18"
+    },
+    {
+      "path": "media/listening/09-thunderstorm.m4a",
+      "family": "stub-folds-listening",
+      "duration": 185.3,
+      "sha256": "c49bd6bb1ece7b38517b2a4c494d74b0e16c071b32f7504cccb8d2742361d4b4"
+    },
+    {
+      "path": "media/listening/10-snow.m4a",
+      "family": "stub-folds-listening",
+      "duration": 201.7,
+      "sha256": "8f6e0a601f396edfb83fe7224040dbd5d2899b2b10efd7e8f646106826818ce3"
+    },
+    {
+      "path": "media/listening/11-cold-and-clear.m4a",
+      "family": "stub-folds-listening",
+      "duration": 207,
+      "sha256": "de9652a3bec4bb9da4e3d30c285face8e247f363fde535bca382a1c0b87b93ec"
+    },
+    {
+      "path": "media/listening/12-clear-night.m4a",
+      "family": "stub-folds-listening",
+      "duration": 215.2,
+      "sha256": "45c4f904bbdbff88d054368865c668c503275aaed01b0819585a3d9a95500aec"
+    },
+    {
+      "path": "media/listening/13-cloudy-night.m4a",
+      "family": "stub-folds-listening",
+      "duration": 208.7,
+      "sha256": "6760e131e514743e5ed39ed582668cb4d6a67e36fbb56fe93e1765b49ac86424"
+    },
+    {
+      "path": "media/listening/album.json",
+      "family": "stub-folds-listening",
+      "sha256": "5ab7d089bcb65da2f0d101344479b9eab50c4c0d107ba12bc230ec21b718d99d"
+    },
+    {
+      "path": "media/listening/cover.png",
+      "family": "stub-folds-listening",
+      "width": 600,
+      "height": 600,
+      "sha256": "0f3d345375b830f2607f3cc7274a26948fd9f1470ba8a41f9448e62e8d76ebff"
+    },
+    {
+      "path": "media/marsh/field.js",
+      "family": "stub-folds-marsh",
+      "sha256": "e4f5c3b1b59f4b5a4ef0c6404806aede49b046bb1b1eaf84e2cd697ab813781a",
+      "sourceCommit": "e9294e9a71eae81964f1114f42e201513b471882"
+    },
+    {
+      "path": "media/plants/allium-tricoccum-128.webp",
+      "family": "stub-folds-plants",
+      "width": 128,
+      "height": 128,
+      "sha256": "8a967076a566f87b8c82bcb4ca1c6490f8672d6ea0562e85c91324c7c3027677"
+    },
+    {
+      "path": "media/plants/allium-tricoccum.webp",
+      "family": "stub-folds-plants",
+      "width": 512,
+      "height": 512,
+      "sha256": "1a7c6d7b0b6825e3bb680dafecd3c69ecd1525f419347d6f9459a18b3598c208"
+    },
+    {
+      "path": "media/plants/amelanchier-canadensis-128.webp",
+      "family": "stub-folds-plants",
+      "width": 128,
+      "height": 128,
+      "sha256": "013080c164b6a0959e5e0ec18593e1a013a083ea3ebbcd9967d002116958ab2a"
+    },
+    {
+      "path": "media/plants/amelanchier-canadensis.webp",
+      "family": "stub-folds-plants",
+      "width": 512,
+      "height": 512,
+      "sha256": "77a41e62c0a0c548c85bca3c517baca1919237d51898b364a05ef2bdcd322d0d"
+    },
+    {
+      "path": "media/plants/asclepias-tuberosa-128.webp",
+      "family": "stub-folds-plants",
+      "width": 128,
+      "height": 128,
+      "sha256": "abd45d871ba99322dbfc8fa1cb7d213505f91197cd1425b871832159b386a981"
+    },
+    {
+      "path": "media/plants/asclepias-tuberosa.webp",
+      "family": "stub-folds-plants",
+      "width": 512,
+      "height": 512,
+      "sha256": "498075bbbad05498ec6afd6b5e669c83ad4c138c1d73f1809d70c7ef842234b7"
+    },
+    {
+      "path": "media/plants/beta-vulgaris-chard-128.webp",
+      "family": "stub-folds-plants",
+      "width": 128,
+      "height": 128,
+      "sha256": "bdca141e9148408ecad91ffd746ea3af38ffd36ad66a4d0c12147d33cfcd2409"
+    },
+    {
+      "path": "media/plants/beta-vulgaris-chard.webp",
+      "family": "stub-folds-plants",
+      "width": 512,
+      "height": 512,
+      "sha256": "00cf3959c2618ff973a9886f980b8fdeba136618fa9bc387b752336cece9e364"
+    },
+    {
+      "path": "media/plants/catalogue.json",
+      "family": "stub-folds-plants",
+      "sha256": "6d95a11b3af9aacff8d97f6b4e3aec4b3a0f6db25f189accbfc47c98d4e6436f"
+    },
+    {
+      "path": "media/plants/cercis-canadensis-128.webp",
+      "family": "stub-folds-plants",
+      "width": 128,
+      "height": 128,
+      "sha256": "007227aacca270145d01ad39468209066b7757a97a2ddc51b03f0596e6229a7c"
+    },
+    {
+      "path": "media/plants/cercis-canadensis.webp",
+      "family": "stub-folds-plants",
+      "width": 512,
+      "height": 512,
+      "sha256": "0e539c2f9f24061c9fd283ce51eb092c9ac75d770e8a1f4000a37e6012ff2a6a"
+    },
+    {
+      "path": "media/plants/cucurbita-pepo-small-sugar-128.webp",
+      "family": "stub-folds-plants",
+      "width": 128,
+      "height": 128,
+      "sha256": "1343b9b6c7041d69fd38047d17fd39d814541aea2e6c8accb19a67675b518075"
+    },
+    {
+      "path": "media/plants/cucurbita-pepo-small-sugar.webp",
+      "family": "stub-folds-plants",
+      "width": 512,
+      "height": 512,
+      "sha256": "5663040cca17a0da6f658e339014b7e2fb70be4f80ccae1d1b2747579a943ac0"
+    },
+    {
+      "path": "media/plants/cydonia-oblonga-meechs-prolific-128.webp",
+      "family": "stub-folds-plants",
+      "width": 128,
+      "height": 128,
+      "sha256": "97d9c5359a02530d67b306c1b8799bee3b054cf505ab0dbf3a9241107183807f"
+    },
+    {
+      "path": "media/plants/cydonia-oblonga-meechs-prolific.webp",
+      "family": "stub-folds-plants",
+      "width": 512,
+      "height": 512,
+      "sha256": "fc938b9767419403420930504182ec4dae8f47185c987d326ee0db027677fd70"
+    },
+    {
+      "path": "media/plants/echinacea-purpurea-128.webp",
+      "family": "stub-folds-plants",
+      "width": 128,
+      "height": 128,
+      "sha256": "13b74f84cd336630098670f23a157dabd936dbd535f6b0cc7d691c0e1caa36ef"
+    },
+    {
+      "path": "media/plants/echinacea-purpurea.webp",
+      "family": "stub-folds-plants",
+      "width": 512,
+      "height": 512,
+      "sha256": "223382cdc6e25254858d1473002ee978040eede39566aa6aceab7a27d5cf2980"
+    },
+    {
+      "path": "media/plants/fragaria-ananassa-fairfax-128.webp",
+      "family": "stub-folds-plants",
+      "width": 128,
+      "height": 128,
+      "sha256": "418c1523b1a57edf8f436d75ccfd89ecd726ec60666344bbc64bc1fb2cdc9a80"
+    },
+    {
+      "path": "media/plants/fragaria-ananassa-fairfax.webp",
+      "family": "stub-folds-plants",
+      "width": 512,
+      "height": 512,
+      "sha256": "19c620677d6b7804cc1641472e136946910cc2b53e3b7e6f4e302d0c9ebc5a45"
+    },
+    {
+      "path": "media/plants/helianthus-annuus-teddy-bear-128.webp",
+      "family": "stub-folds-plants",
+      "width": 128,
+      "height": 128,
+      "sha256": "9a1535b0b3fa08f59c04f6f20f998d1ccddf5d208aa91765521a4a06be351ae8"
+    },
+    {
+      "path": "media/plants/helianthus-annuus-teddy-bear.webp",
+      "family": "stub-folds-plants",
+      "width": 512,
+      "height": 512,
+      "sha256": "c4e437e0fa15ccc1808dd8221ee9a83cc9f4e13af2137a9aeca3bcd2b9cb56b0"
+    },
+    {
+      "path": "media/plants/lavandula-angustifolia-munstead-128.webp",
+      "family": "stub-folds-plants",
+      "width": 128,
+      "height": 128,
+      "sha256": "d6bfb9078e7f67005a7b202b9e2af8f13e194f37d0771662f6c9e3c3c9073cfc"
+    },
+    {
+      "path": "media/plants/lavandula-angustifolia-munstead.webp",
+      "family": "stub-folds-plants",
+      "width": 512,
+      "height": 512,
+      "sha256": "bbc39c6e18556329ea0be2e2805c401875610d04cda5abeb3835d475732a0753"
+    },
+    {
+      "path": "media/plants/monarda-fistulosa-128.webp",
+      "family": "stub-folds-plants",
+      "width": 128,
+      "height": 128,
+      "sha256": "42b12aa2a9a9b004a6d2dddd7362508ecb56cd8a1e916a22caa335106a33b394"
+    },
+    {
+      "path": "media/plants/monarda-fistulosa.webp",
+      "family": "stub-folds-plants",
+      "width": 512,
+      "height": 512,
+      "sha256": "2dde53792f2e08c5f1d70ba391691f915de3290ca0fc1b6dbdec85398c46d86a"
+    },
+    {
+      "path": "media/plants/nigella-damascena-128.webp",
+      "family": "stub-folds-plants",
+      "width": 128,
+      "height": 128,
+      "sha256": "67ec79011b487e5c0902b56437b7b9af171da0e069bffbf6f3e1a1597b4a4b55"
+    },
+    {
+      "path": "media/plants/nigella-damascena.webp",
+      "family": "stub-folds-plants",
+      "width": 512,
+      "height": 512,
+      "sha256": "729889282c6ab616337a03e998e48cdf1f088831729c674452a81e130b15edc1"
+    },
+    {
+      "path": "media/plants/papaver-rhoeas-amazing-grey-128.webp",
+      "family": "stub-folds-plants",
+      "width": 128,
+      "height": 128,
+      "sha256": "a9a0f318a204678b449307aa1eaf71b93a6027da0f950069aa9f95d6b7b1ce84"
+    },
+    {
+      "path": "media/plants/papaver-rhoeas-amazing-grey.webp",
+      "family": "stub-folds-plants",
+      "width": 512,
+      "height": 512,
+      "sha256": "f134cacfebc34db0d82cdd52cd323f31585fa00270728c84b6f8740254ba2c9f"
+    },
+    {
+      "path": "media/plants/pisum-sativum-charmette-128.webp",
+      "family": "stub-folds-plants",
+      "width": 128,
+      "height": 128,
+      "sha256": "5c29ad993e1ab41bde7214a0cc9b164f58631132742fc447cee67395fcc7dd11"
+    },
+    {
+      "path": "media/plants/pisum-sativum-charmette.webp",
+      "family": "stub-folds-plants",
+      "width": 512,
+      "height": 512,
+      "sha256": "b873e1c3182f3b83ce115df163e91dd3ecb6e81809490f19568572049c15522b"
+    },
+    {
+      "path": "media/plants/raphanus-sativus-chinese-red-meat-128.webp",
+      "family": "stub-folds-plants",
+      "width": 128,
+      "height": 128,
+      "sha256": "90ac38bca3b81a438efbcd5675cc993ca250eb77988e40158a44f61c5249e8e1"
+    },
+    {
+      "path": "media/plants/raphanus-sativus-chinese-red-meat.webp",
+      "family": "stub-folds-plants",
+      "width": 512,
+      "height": 512,
+      "sha256": "f4512e981810d251338cb062f97c6fe0e9e0ce9e8dfde099631a9f9a31e23ceb"
+    },
+    {
+      "path": "media/plants/rhus-typhina-128.webp",
+      "family": "stub-folds-plants",
+      "width": 128,
+      "height": 128,
+      "sha256": "961f7d53c59bf69d49a016c0d771e421725da654ebedeb852d61b53616329450"
+    },
+    {
+      "path": "media/plants/rhus-typhina.webp",
+      "family": "stub-folds-plants",
+      "width": 512,
+      "height": 512,
+      "sha256": "8f3b43878dbcb907630c0026f79d3bd455718f6c6d103a9e6747c6247e9fc19e"
+    },
+    {
+      "path": "media/plants/rudbeckia-fulgida-goldsturm-128.webp",
+      "family": "stub-folds-plants",
+      "width": 128,
+      "height": 128,
+      "sha256": "fe59f4e9b08967e7912fdb389e74bb97a8f1eb9274306abeacfe879a81e31c2c"
+    },
+    {
+      "path": "media/plants/rudbeckia-fulgida-goldsturm.webp",
+      "family": "stub-folds-plants",
+      "width": 512,
+      "height": 512,
+      "sha256": "a46cb478c466cff4cbbe00f890285241df30f073a9de368cb6cf3d05e4682c08"
+    },
+    {
+      "path": "media/plants/sassafras-albidum-128.webp",
+      "family": "stub-folds-plants",
+      "width": 128,
+      "height": 128,
+      "sha256": "831959ca5570defd8be099f314ac53994354a8b8dc8a64c4858bd9b23349fb62"
+    },
+    {
+      "path": "media/plants/sassafras-albidum.webp",
+      "family": "stub-folds-plants",
+      "width": 512,
+      "height": 512,
+      "sha256": "cf98c5a0715ca20be98bf9f326370901fd8bdd8c1334bf55993dd29520e3c18d"
+    },
+    {
+      "path": "media/plants/solanum-lycopersicum-brandywine-128.webp",
+      "family": "stub-folds-plants",
+      "width": 128,
+      "height": 128,
+      "sha256": "0019a6325a7fd04cee00c4ed67d45f841f5a3bee0e20ce7ffb7c7422eb4d80d3"
+    },
+    {
+      "path": "media/plants/solanum-lycopersicum-brandywine.webp",
+      "family": "stub-folds-plants",
+      "width": 512,
+      "height": 512,
+      "sha256": "96efc544df1b02adee9f9e689e78a8d77f20e3329bb8d347099b27351c86c3fa"
+    },
+    {
+      "path": "media/plants/symphyotrichum-novae-angliae-128.webp",
+      "family": "stub-folds-plants",
+      "width": 128,
+      "height": 128,
+      "sha256": "17f17a2beed5a4fd6e6d8027978ac00deee50ae8b643b353e354c44f544bc0f8"
+    },
+    {
+      "path": "media/plants/symphyotrichum-novae-angliae.webp",
+      "family": "stub-folds-plants",
+      "width": 512,
+      "height": 512,
+      "sha256": "280572d1f6dcb02fbe620f03814650329a175786df93552d97359bf31c4431f1"
+    },
+    {
+      "path": "media/plants/trillium-grandiflorum-128.webp",
+      "family": "stub-folds-plants",
+      "width": 128,
+      "height": 128,
+      "sha256": "dd5eb0b87c1d9e61a611047e674f7f59d4fd419f03ef719ca428ac46a5688668"
+    },
+    {
+      "path": "media/plants/trillium-grandiflorum.webp",
+      "family": "stub-folds-plants",
+      "width": 512,
+      "height": 512,
+      "sha256": "f7fe1ee6f55594d2f555b13360445bd5bebd77b53f2661672d4ca28d2261e3b6"
+    },
+    {
+      "path": "media/plants/tropaeolum-majus-tip-top-mahogany-128.webp",
+      "family": "stub-folds-plants",
+      "width": 128,
+      "height": 128,
+      "sha256": "2aa1201dd7601b2ee913e41acfe19e7899c5e620fbce49d03939f00ff0430386"
+    },
+    {
+      "path": "media/plants/tropaeolum-majus-tip-top-mahogany.webp",
+      "family": "stub-folds-plants",
+      "width": 512,
+      "height": 512,
+      "sha256": "0e3e3f156e8a43cbb0f3939c94205120f9c0eb218d4d3803525459e95e58e2eb"
+    },
+    {
+      "path": "media/plants/vaccinium-corymbosum-bluecrop-128.webp",
+      "family": "stub-folds-plants",
+      "width": 128,
+      "height": 128,
+      "sha256": "fb1463ce21c6157aa8f8f78973f6f533b34989d8d16cc9c1ecf419d7f84ace24"
+    },
+    {
+      "path": "media/plants/vaccinium-corymbosum-bluecrop.webp",
+      "family": "stub-folds-plants",
+      "width": 512,
+      "height": 512,
+      "sha256": "c79f0d78ffb0a7bfe5f255a0fe89aabed17e75b92b61b00a85c1f1140138f5df"
     }
   ],
   "fontFiles": [
@@ -415,6 +884,18 @@
       "id": "stub-badge-free",
       "mimeType": "image/svg+xml",
       "sha256": "bf387577b539c557f452cd9d0c1fb8b144997871971d6bbf0791191e42aac590"
+    }
+  ],
+  "sealedFolders": [
+    {
+      "path": "home/demo/",
+      "family": "north-hollow",
+      "files": 2154,
+      "bytes": 42571653,
+      "manifestSha256": "effd383aaaac804ed5d49f75f255c8d5c967869a53285d4b71414d3783a4ec5a",
+      "origin": "North Hollow, the sealed read-only demonstration of FellowSoft Home: the house's real client, built for /home/demo/, before a recording of the real house lived in for five months by an invented household. Built October 17, 2026 by shell/scripts/house-demo/build.mjs in fellowsoft-pce at commit 6b2a2c65; carried byte for byte.",
+      "privacy": "Invented household and invented services only. The folder makes no request beyond itself, keeps nothing in the browser and asks no permission; on Stub's paper it opens in a sandboxed window that may ask for no device permission. Nothing of it is requested until the North Hollow fold is opened.",
+      "pending": "Its room 02 carries the product's retired name, which the site's retired-language rule refuses; the words are admitted in four of its files, pinned in the package gate, pending the owner's ruling on the room's name."
     }
   ]
 }

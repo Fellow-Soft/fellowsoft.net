@@ -1,0 +1,40 @@
+{
+  "revision": "live-world-04",
+  "place": "meadow",
+  "source": "source-blender/Meadow - live04.blend",
+  "units": "metres; glTF Y up",
+  "lights": [
+    {
+      "name": "Pavilion sheltered lantern",
+      "position": [
+        -7.0,
+        4.678520202636719,
+        -20.0
+      ],
+      "energy": 3.359999895095825,
+      "color": [
+        1.0,
+        0.5972017645835876,
+        0.23839756846427917
+      ],
+      "distance_to_camera": 32.40591091320711
+    }
+  ],
+  "bytes": 59085976,
+  "camera": [
+    5.0,
+    -10.0,
+    2.200000047683716
+  ],
+  "botanical_tiers": 12,
+  "presentation": "live geometry; no rendered scene plates",
+  "assetEdition": "meadow-meshopt-20260907.1",
+  "transport": {
+    "extension": "EXT_meshopt_compression",
+    "filter": "NONE",
+    "sourceAsset": "assets/meadow-live-04.glb",
+    "sourceBytes": 109255288,
+    "sourceSHA256": "cbca4dd38cc5ffdaeeabb6c1214c9581661e3f2d9dc5527accdb218547f48447",
+    "sha256": "d68a2b451395d3bb3e373b23210e561edbf3f486287a2daff03f624511401dab"
+  }
+}

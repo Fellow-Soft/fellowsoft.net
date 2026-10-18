@@ -1,0 +1,1 @@
+{"ok":true,"domain":"alarms","view":{"available":true,"sensors":[{"deviceId":"sensor-water-cellar","kind":"water","state":"clear","available":true,"finding":null},{"deviceId":"sensor-smoke-hall","kind":"smoke","state":"clear","available":true,"finding":null}]}}

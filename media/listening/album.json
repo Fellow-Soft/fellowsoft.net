@@ -1,0 +1,349 @@
+{
+  "title": "Out the Window",
+  "subtitle": "thirteen pieces for the weather outside",
+  "artist": "FellowSoft",
+  "maker": "FellowSoft",
+  "year": 2026,
+  "cover": {
+    "png": "cover.png",
+    "svg": "cover.svg"
+  },
+  "seconds": 2659.3,
+  "method": "Made on the house score engine (shell/music/house-score): the native choir, strings, felt keys, air and bass of the film A Day to Keep, in its room, with an authored world under them. No chimes, bells or glass.",
+  "loudness": {
+    "target": -16,
+    "ceilingDbTP": -1
+  },
+  "tracks": [
+    {
+      "n": 1,
+      "title": "Clear Morning",
+      "seconds": 207,
+      "note": "The film’s own key and its four statements, with the marsh awake under them.",
+      "file": "01-clear-morning.m4a",
+      "key": "D MAJOR",
+      "bpm": 66,
+      "weather": {
+        "conditions": [
+          "clear",
+          "partly"
+        ],
+        "hours": [
+          "morning"
+        ]
+      },
+      "loudness": {
+        "integrated": -16,
+        "truePeak": -2.6,
+        "range": 6.9
+      },
+      "above8k": -35.8,
+      "bytes": 3352155
+    },
+    {
+      "n": 2,
+      "title": "Afternoon Sun",
+      "seconds": 204.3,
+      "note": "The motif up a fifth, with the felt keys turning slowly under it.",
+      "file": "02-afternoon-sun.m4a",
+      "key": "A MAJOR",
+      "bpm": 72,
+      "weather": {
+        "conditions": [
+          "clear",
+          "partly"
+        ],
+        "hours": [
+          "afternoon"
+        ]
+      },
+      "loudness": {
+        "integrated": -16,
+        "truePeak": -2.3,
+        "range": 6.2
+      },
+      "above8k": -36.6,
+      "bytes": 3309334
+    },
+    {
+      "n": 3,
+      "title": "Warm and Humid",
+      "seconds": 211.6,
+      "note": "Half speed and low, on a bass that hardly moves, with the insects far off.",
+      "file": "03-warm-and-humid.m4a",
+      "key": "G MAJOR",
+      "bpm": 56,
+      "weather": {
+        "conditions": [
+          "clear",
+          "partly",
+          "cloudy"
+        ],
+        "hours": [
+          "day"
+        ],
+        "heat": true
+      },
+      "loudness": {
+        "integrated": -16,
+        "truePeak": -2.4,
+        "range": 6.8
+      },
+      "above8k": -30,
+      "bytes": 3426747
+    },
+    {
+      "n": 4,
+      "title": "Windy",
+      "seconds": 190.5,
+      "note": "The air carries the motif, and the strings lean in and fall back like the gusts.",
+      "file": "04-windy.m4a",
+      "key": "E DORIAN",
+      "bpm": 76,
+      "weather": {
+        "conditions": [
+          "clear",
+          "partly",
+          "cloudy"
+        ],
+        "hours": [
+          "any"
+        ],
+        "wind": true
+      },
+      "loudness": {
+        "integrated": -16,
+        "truePeak": -2.3,
+        "range": 7.9
+      },
+      "above8k": -35.4,
+      "bytes": 3084851
+    },
+    {
+      "n": 5,
+      "title": "Grey Skies",
+      "seconds": 207.3,
+      "note": "The film’s key turned to its relative minor, with one brighter patch.",
+      "file": "05-grey-skies.m4a",
+      "key": "B MINOR",
+      "bpm": 62,
+      "weather": {
+        "conditions": [
+          "cloudy"
+        ],
+        "hours": [
+          "day"
+        ]
+      },
+      "loudness": {
+        "integrated": -16,
+        "truePeak": -3.3,
+        "range": 6.2
+      },
+      "above8k": -40,
+      "bytes": 3357323
+    },
+    {
+      "n": 6,
+      "title": "Fog",
+      "seconds": 227.7,
+      "note": "One soft chord that changes colour underneath, and the motif found a piece at a time.",
+      "file": "06-fog.m4a",
+      "key": "D MAJOR",
+      "bpm": 50,
+      "weather": {
+        "conditions": [
+          "fog"
+        ],
+        "hours": [
+          "any"
+        ]
+      },
+      "loudness": {
+        "integrated": -16,
+        "truePeak": -2.4,
+        "range": 6.7
+      },
+      "above8k": -36.7,
+      "bytes": 3687116
+    },
+    {
+      "n": 7,
+      "title": "Light Rain",
+      "seconds": 202,
+      "note": "A few soft notes falling where they fall, under the motif in G.",
+      "file": "07-light-rain.m4a",
+      "key": "G MAJOR",
+      "bpm": 68,
+      "weather": {
+        "conditions": [
+          "drizzle",
+          "light-rain"
+        ],
+        "hours": [
+          "day"
+        ],
+        "wet": true
+      },
+      "loudness": {
+        "integrated": -16,
+        "truePeak": -2.1,
+        "range": 6.5
+      },
+      "above8k": -27.3,
+      "bytes": 3271692
+    },
+    {
+      "n": 8,
+      "title": "Steady Rain",
+      "seconds": 191,
+      "note": "Heard from inside, with two notes kept going in eighths, as rain keeps on the roof.",
+      "file": "08-steady-rain.m4a",
+      "key": "E MINOR",
+      "bpm": 60,
+      "weather": {
+        "conditions": [
+          "rain"
+        ],
+        "hours": [
+          "any"
+        ],
+        "wet": true
+      },
+      "loudness": {
+        "integrated": -16,
+        "truePeak": -2.6,
+        "range": 6.7
+      },
+      "above8k": -26.6,
+      "bytes": 3093484
+    },
+    {
+      "n": 9,
+      "title": "Thunderstorm",
+      "seconds": 185.3,
+      "note": "D minor with the thunder far off, then nearer, and D major again when it has passed.",
+      "file": "09-thunderstorm.m4a",
+      "key": "D MINOR TO D MAJOR",
+      "bpm": 64,
+      "weather": {
+        "conditions": [
+          "storm"
+        ],
+        "hours": [
+          "any"
+        ],
+        "exact": true
+      },
+      "loudness": {
+        "integrated": -16,
+        "truePeak": -2.2,
+        "range": 11.3
+      },
+      "above8k": -29.8,
+      "bytes": 3000935
+    },
+    {
+      "n": 10,
+      "title": "Snow",
+      "seconds": 201.7,
+      "note": "Hushed and slow, the strings high and soft and the choir only oo.",
+      "file": "10-snow.m4a",
+      "key": "A MAJOR",
+      "bpm": 54,
+      "weather": {
+        "conditions": [
+          "snow"
+        ],
+        "hours": [
+          "any"
+        ]
+      },
+      "loudness": {
+        "integrated": -16,
+        "truePeak": -2.7,
+        "range": 8.1
+      },
+      "above8k": -36.8,
+      "bytes": 3266167
+    },
+    {
+      "n": 11,
+      "title": "Cold and Clear",
+      "seconds": 207,
+      "note": "Open fifths low and the colour high, with dry grass moving in the wind.",
+      "file": "11-cold-and-clear.m4a",
+      "key": "E MAJOR",
+      "bpm": 66,
+      "weather": {
+        "conditions": [
+          "clear",
+          "partly"
+        ],
+        "hours": [
+          "day"
+        ],
+        "cold": true
+      },
+      "loudness": {
+        "integrated": -16,
+        "truePeak": -2.4,
+        "range": 7.1
+      },
+      "above8k": -36.2,
+      "bytes": 3352988
+    },
+    {
+      "n": 12,
+      "title": "Clear Night",
+      "seconds": 215.2,
+      "note": "The film’s key for its night: crickets, close water and the motif, low.",
+      "file": "12-clear-night.m4a",
+      "key": "D MAJOR",
+      "bpm": 54,
+      "weather": {
+        "conditions": [
+          "clear",
+          "partly"
+        ],
+        "hours": [
+          "night"
+        ]
+      },
+      "loudness": {
+        "integrated": -16,
+        "truePeak": -2.3,
+        "range": 7.6
+      },
+      "above8k": -36.3,
+      "bytes": 3485454
+    },
+    {
+      "n": 13,
+      "title": "Cloudy Night",
+      "seconds": 208.7,
+      "note": "B minor, low and close, with the lamp on and the eaves still dripping.",
+      "file": "13-cloudy-night.m4a",
+      "key": "B MINOR",
+      "bpm": 52,
+      "weather": {
+        "conditions": [
+          "cloudy",
+          "drizzle",
+          "light-rain",
+          "rain"
+        ],
+        "hours": [
+          "night"
+        ]
+      },
+      "loudness": {
+        "integrated": -16,
+        "truePeak": -2.6,
+        "range": 6.5
+      },
+      "above8k": -41.7,
+      "bytes": 3379436
+    }
+  ]
+}

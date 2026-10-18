@@ -1,0 +1,31 @@
+{
+  "revision": "live-world-04",
+  "place": "terrace",
+  "source": "source-blender/Terrace - live04.blend",
+  "units": "metres; glTF Y up",
+  "lights": [
+    {
+      "name": "Reading lamp within the shelter",
+      "position": [
+        -4.5,
+        24.149999618530273,
+        26.5
+      ],
+      "energy": 28.0,
+      "color": [
+        1.0,
+        0.6307571530342102,
+        0.35153260827064514
+      ],
+      "distance_to_camera": 8.38181960896423
+    }
+  ],
+  "bytes": 82903604,
+  "camera": [
+    -2.0,
+    -34.5,
+    24.219999313354492
+  ],
+  "botanical_tiers": 21,
+  "presentation": "live geometry; no rendered scene plates"
+}
