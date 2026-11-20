@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="dark">
 <title>FellowSoft</title>
-<meta name="description" content="FellowSoft">
+<meta name="description" content="FellowSoft. A personal computing environment. Coming 2027.">
 <link rel="icon" type="image/svg+xml" href="/fellowsoft-window-mark.svg">
 <link rel="icon" type="image/png" href="/favicon.png">
 <style>
@@ -16,14 +16,33 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: 'DM Sans';
+  src: url('/fonts/dm-sans-latin-wght-normal.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('/fonts/jetbrains-mono-latin-wght-normal.woff2') format('woff2');
+  font-weight: 100 800;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
   color-scheme: dark;
   --night: #0a0a12;
   --pelagic: #040c19;
-  --stardust: #f8f7e9;
-  --lamp: #e8cb8f;
+  --line: #2a2a38;
   --mark-line: #555566;
+  --stardust: #f8f7e9;
+  --prose: #b6b3ab;
+  --muted: #888899;
+  --lamp: #e8cb8f;
+  --lamp-quiet: rgba(232, 203, 143, .76);
+  --shinkai: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 * { box-sizing: border-box; }
@@ -31,11 +50,11 @@ html, body { height: 100%; margin: 0; }
 
 body {
   background:
-    radial-gradient(640px 480px at 50% 47%, rgba(232, 203, 143, .06), transparent 72%),
-    radial-gradient(1200px 760px at 50% 0%, rgba(4, 12, 25, .85), transparent 72%),
+    radial-gradient(760px 540px at 50% 46%, rgba(232, 203, 143, .055), transparent 72%),
+    radial-gradient(1280px 800px at 50% 0%, rgba(4, 12, 25, .88), transparent 72%),
     var(--night);
   color: var(--stardust);
-  font-family: 'Jost', -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-family: 'DM Sans', -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   display: grid;
@@ -45,6 +64,38 @@ body {
   position: relative;
 }
 
+/* Still Duskfield starfield (4% to 11% Star Dust, never moves) */
+.stars {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    radial-gradient(1px 1px at 14% 19%, rgba(248, 247, 233, .10) 50%, transparent 100%),
+    radial-gradient(1px 1px at 28% 11%, rgba(248, 247, 233, .06) 50%, transparent 100%),
+    radial-gradient(1.2px 1.2px at 41% 24%, rgba(248, 247, 233, .08) 50%, transparent 100%),
+    radial-gradient(1px 1px at 63% 15%, rgba(248, 247, 233, .11) 50%, transparent 100%),
+    radial-gradient(1px 1px at 78% 22%, rgba(248, 247, 233, .07) 50%, transparent 100%),
+    radial-gradient(1.2px 1.2px at 87% 12%, rgba(248, 247, 233, .09) 50%, transparent 100%),
+    radial-gradient(1px 1px at 19% 68%, rgba(248, 247, 233, .06) 50%, transparent 100%),
+    radial-gradient(1px 1px at 82% 74%, rgba(248, 247, 233, .08) 50%, transparent 100%),
+    radial-gradient(1px 1px at 9% 44%, rgba(248, 247, 233, .05) 50%, transparent 100%),
+    radial-gradient(1px 1px at 91% 49%, rgba(248, 247, 233, .06) 50%, transparent 100%),
+    radial-gradient(1px 1px at 34% 83%, rgba(248, 247, 233, .05) 50%, transparent 100%),
+    radial-gradient(1px 1px at 69% 86%, rgba(248, 247, 233, .07) 50%, transparent 100%);
+}
+
+/* Ambient lamplight horizon pool */
+.pool {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(520px 380px at 50% 45%, rgba(232, 203, 143, .05), transparent 72%);
+  opacity: 1;
+}
+
+/* Tactile ~2% paper grain */
 .grain {
   position: fixed;
   inset: 0;
@@ -52,6 +103,23 @@ body {
   z-index: 0;
   opacity: .024;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Three near-imperceptible dusk motes (opt-in motion only) */
+.motes {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+.mote {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: var(--lamp);
+  opacity: 0;
 }
 
 main {
@@ -62,34 +130,46 @@ main {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 24px;
-  gap: 28px;
+  padding: 32px 24px;
 }
 
 .mark-wrap {
   position: relative;
   display: grid;
   place-items: center;
+  margin-bottom: 28px;
 }
 
-.mark-wrap::before {
-  content: "";
+/* Emitted glow behind the lit pane (no drop shadow, no clipping seam) */
+.mark-aura {
   position: absolute;
-  inset: -64px;
-  background: radial-gradient(circle closest-side at 55% 58%, rgba(232, 203, 143, .14) 0%, rgba(232, 203, 143, .04) 45%, transparent 100%);
+  inset: -82px;
+  background: radial-gradient(circle closest-side at 55% 58%, rgba(232, 203, 143, .21) 0%, rgba(232, 203, 143, .065) 44%, transparent 100%);
+  opacity: .84;
   pointer-events: none;
+  transition: opacity 300ms var(--shinkai), transform 300ms var(--shinkai);
 }
 
 .mark {
   position: relative;
-  width: clamp(72px, 11vw, 92px);
+  width: clamp(74px, 11vw, 94px);
   height: auto;
   display: block;
+  transition: filter 300ms var(--shinkai);
+}
+
+/* Lean-in hover: stepping a little closer to a lit window */
+.mark-wrap:hover .mark {
+  filter: brightness(1.04);
+}
+.mark-wrap:hover .mark-aura {
+  opacity: 1;
+  transform: scale(1.04);
 }
 
 h1 {
   font-family: 'Jost', -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
-  font-size: clamp(1.85rem, 3.6vw, 2.55rem);
+  font-size: clamp(1.9rem, 3.6vw, 2.6rem);
   font-weight: 300;
   letter-spacing: .02em;
   line-height: 1;
@@ -99,22 +179,155 @@ h1 {
 h1 .fellow { color: var(--stardust); }
 h1 .soft   { color: var(--lamp); }
 
+.rule {
+  width: 36px;
+  height: 1px;
+  background: var(--line);
+  margin: 26px 0 22px;
+  transform-origin: center;
+}
+
+.note {
+  font-family: 'DM Sans', -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: clamp(.94rem, 1.35vw, 1.03rem);
+  font-weight: 300;
+  letter-spacing: .01em;
+  line-height: 1.5;
+  color: var(--prose);
+  margin: 0;
+}
+
+.when {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin: 14px 0 0;
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.when .dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--lamp-quiet);
+  flex: none;
+}
+
+/* Opt-in motion only: default static state stays completely visible under reduced motion */
 @media (prefers-reduced-motion: no-preference) {
+  .mark-wrap {
+    animation: fade-up 900ms var(--shinkai) both;
+  }
+  .mark-aura {
+    animation:
+      aura-kindle 1400ms var(--shinkai) both,
+      aura-breath 7s ease-in-out 1400ms infinite;
+  }
   .lamp-pane {
-    animation: lamp-breath 7s ease-in-out infinite;
+    animation:
+      lamp-kindle 1200ms var(--shinkai) both,
+      lamp-breath 7s ease-in-out 1200ms infinite;
+  }
+  .pool {
+    animation: pool-breath 14s ease-in-out infinite;
+  }
+  h1 {
+    animation: phosphor-settle 900ms var(--shinkai) 260ms both;
+  }
+  .rule {
+    animation: rule-draw 700ms var(--shinkai) 520ms both;
+  }
+  .note {
+    animation: fade-up 700ms var(--shinkai) 640ms both;
+  }
+  .when {
+    animation: fade-up 700ms var(--shinkai) 780ms both;
+  }
+  .when .dot {
+    animation: dot-pulse 7s ease-in-out 1400ms infinite;
+  }
+
+  .mote { opacity: 0; animation: mote-drift 28s linear infinite; }
+  .mote:nth-child(1) { left: 27%; top: 18%; animation-duration: 26s; animation-delay: -4s; }
+  .mote:nth-child(2) { left: 71%; top: 30%; animation-duration: 32s; animation-delay: -13s; }
+  .mote:nth-child(3) { left: 46%; top: 58%; animation-duration: 24s; animation-delay: -19s; }
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes phosphor-settle {
+    0% {
+      opacity: 0;
+      transform: translateY(8px);
+      text-shadow: 0 0 18px rgba(232, 203, 143, .40), 1px 0 0 rgba(232, 203, 143, .28);
+    }
+    65% {
+      opacity: 1;
+      text-shadow: 0 0 10px rgba(232, 203, 143, .16), 0 0 0 rgba(232, 203, 143, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+      text-shadow: 0 0 0 rgba(232, 203, 143, 0);
+    }
+  }
+  @keyframes rule-draw {
+    from { opacity: 0; transform: scaleX(0); }
+    to   { opacity: 1; transform: scaleX(1); }
+  }
+  @keyframes lamp-kindle {
+    from { opacity: .45; filter: brightness(.82); }
+    to   { opacity: 1; filter: brightness(1); }
   }
   @keyframes lamp-breath {
-    0%, 100% { opacity: 1; }
-    50%      { opacity: .94; }
+    0%, 100% { filter: brightness(1); }
+    50%      { filter: brightness(1.03); }
+  }
+  @keyframes aura-kindle {
+    from { opacity: 0; transform: scale(.86); }
+    to   { opacity: .82; transform: scale(1); }
+  }
+  @keyframes aura-breath {
+    0%, 100% { opacity: .76; transform: scale(1); }
+    50%      { opacity: .98; transform: scale(1.04); }
+  }
+  @keyframes pool-breath {
+    0%, 100% { opacity: .75; }
+    50%      { opacity: 1; }
+  }
+  @keyframes dot-pulse {
+    0%, 100% { opacity: .68; }
+    50%      { opacity: 1; }
+  }
+  @keyframes mote-drift {
+    0%   { transform: translate(0, 0); opacity: 0; }
+    20%  { opacity: .11; }
+    55%  { transform: translate(12px, 30px); opacity: .14; }
+    85%  { opacity: .07; }
+    100% { transform: translate(22px, 60px); opacity: 0; }
   }
 }
 </style>
 </head>
 <body>
+<div class="stars" aria-hidden="true"></div>
+<div class="pool" aria-hidden="true"></div>
 <div class="grain" aria-hidden="true"></div>
+<div class="motes" aria-hidden="true">
+  <span class="mote"></span>
+  <span class="mote"></span>
+  <span class="mote"></span>
+</div>
 
 <main>
   <div class="mark-wrap">
+    <div class="mark-aura" aria-hidden="true"></div>
     <svg class="mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 76" aria-hidden="true" focusable="false" data-fellowsoft-window-mark="true">
       <defs>
         <linearGradient id="fellowsoft-night" x1="0" y1="0" x2="0" y2="1">
@@ -139,6 +352,9 @@ h1 .soft   { color: var(--lamp); }
     </svg>
   </div>
   <h1><span class="fellow">Fellow</span><span class="soft">Soft</span></h1>
+  <div class="rule" aria-hidden="true"></div>
+  <p class="note">A personal computing environment.</p>
+  <p class="when"><span class="dot" aria-hidden="true"></span><span>Coming 2027</span></p>
 </main>
 </body>
 </html>
